@@ -1,0 +1,2 @@
+# Using imagemin-cli or similar tool
+   npx imagemin src/images/hero-background.jpg --out-dir=src/images --plugin=mozjpeg
