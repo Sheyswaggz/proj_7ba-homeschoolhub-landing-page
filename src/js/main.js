@@ -486,6 +486,33 @@ function initHeroSection() {
 }
 
 /**
+ * Initialize curriculum section functionality
+ */
+function initCurriculumSection() {
+  try {
+    const curriculumSection = DOM.query('.curriculum-section, [data-curriculum-section]');
+    
+    if (!curriculumSection) {
+      console.warn('[Main] Curriculum section not found in DOM');
+      return;
+    }
+
+    const curriculumItems = DOM.queryAll('[data-curriculum-item]', curriculumSection);
+    
+    if (curriculumItems.length === 0) {
+      console.warn('[Main] No curriculum items found');
+      return;
+    }
+
+    console.log('[Main] Curriculum section functionality initialized', {
+      itemCount: curriculumItems.length,
+    });
+  } catch (error) {
+    console.error('[Main] Curriculum section initialization failed', error);
+  }
+}
+
+/**
  * Smooth scroll navigation handler
  */
 function initSmoothScroll() {
@@ -594,6 +621,7 @@ function init() {
     initHeaderBehavior();
     initFormHandling();
     initHeroSection();
+    initCurriculumSection();
 
     console.log('HomeschoolHub application initialized successfully');
   } catch (error) {
