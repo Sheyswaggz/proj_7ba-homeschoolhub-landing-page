@@ -1,0 +1,415 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-27",
+    "description": "Comprehensive curriculum information for K-12 homeschool education"
+  },
+  "gradeLevels": [
+    {
+      "id": "elementary",
+      "name": "Elementary (K-5)",
+      "ageRange": "5-11 years",
+      "description": "Building strong foundations in core subjects through hands-on learning and exploration",
+      "highlights": [
+        "Phonics-based reading instruction",
+        "Hands-on math manipulatives",
+        "Science experiments and nature studies",
+        "Creative arts integration",
+        "Social-emotional learning focus"
+      ],
+      "subjects": [
+        {
+          "name": "Language Arts",
+          "topics": [
+            "Phonics and reading comprehension",
+            "Writing fundamentals",
+            "Spelling and vocabulary",
+            "Grammar basics",
+            "Literature appreciation"
+          ],
+          "weeklyHours": 5
+        },
+        {
+          "name": "Mathematics",
+          "topics": [
+            "Number sense and operations",
+            "Basic geometry and measurement",
+            "Problem-solving strategies",
+            "Mental math skills",
+            "Real-world applications"
+          ],
+          "weeklyHours": 4
+        },
+        {
+          "name": "Science",
+          "topics": [
+            "Life science exploration",
+            "Physical science basics",
+            "Earth and space science",
+            "Scientific method introduction",
+            "Hands-on experiments"
+          ],
+          "weeklyHours": 3
+        },
+        {
+          "name": "Social Studies",
+          "topics": [
+            "Community and citizenship",
+            "Geography fundamentals",
+            "American history introduction",
+            "Cultural awareness",
+            "Map skills"
+          ],
+          "weeklyHours": 2
+        },
+        {
+          "name": "Arts & Enrichment",
+          "topics": [
+            "Visual arts",
+            "Music appreciation",
+            "Physical education",
+            "Character development",
+            "Life skills"
+          ],
+          "weeklyHours": 3
+        }
+      ]
+    },
+    {
+      "id": "middle",
+      "name": "Middle School (6-8)",
+      "ageRange": "11-14 years",
+      "description": "Developing critical thinking and independent learning skills across all disciplines",
+      "highlights": [
+        "Project-based learning approach",
+        "Pre-algebra and algebra preparation",
+        "Laboratory science experiences",
+        "Research and writing skills",
+        "Technology integration"
+      ],
+      "subjects": [
+        {
+          "name": "Language Arts",
+          "topics": [
+            "Advanced reading comprehension",
+            "Essay writing and composition",
+            "Literary analysis",
+            "Research skills",
+            "Public speaking"
+          ],
+          "weeklyHours": 5
+        },
+        {
+          "name": "Mathematics",
+          "topics": [
+            "Pre-algebra concepts",
+            "Algebra I fundamentals",
+            "Geometry introduction",
+            "Data analysis and statistics",
+            "Mathematical reasoning"
+          ],
+          "weeklyHours": 5
+        },
+        {
+          "name": "Science",
+          "topics": [
+            "Life science (biology basics)",
+            "Physical science (chemistry and physics)",
+            "Earth science",
+            "Scientific inquiry and experimentation",
+            "STEM projects"
+          ],
+          "weeklyHours": 4
+        },
+        {
+          "name": "Social Studies",
+          "topics": [
+            "World history",
+            "American history",
+            "Geography and cultures",
+            "Civics and government",
+            "Economics basics"
+          ],
+          "weeklyHours": 3
+        },
+        {
+          "name": "Electives",
+          "topics": [
+            "Foreign language",
+            "Technology and coding",
+            "Arts (visual or performing)",
+            "Physical education",
+            "Life skills and career exploration"
+          ],
+          "weeklyHours": 4
+        }
+      ]
+    },
+    {
+      "id": "high",
+      "name": "High School (9-12)",
+      "ageRange": "14-18 years",
+      "description": "College-preparatory curriculum with advanced coursework and real-world applications",
+      "highlights": [
+        "College-prep and honors courses",
+        "Advanced Placement (AP) options",
+        "Dual enrollment opportunities",
+        "Career and college counseling",
+        "Portfolio development"
+      ],
+      "subjects": [
+        {
+          "name": "English",
+          "topics": [
+            "American and British literature",
+            "World literature",
+            "Advanced composition",
+            "Critical analysis",
+            "College essay preparation"
+          ],
+          "weeklyHours": 5
+        },
+        {
+          "name": "Mathematics",
+          "topics": [
+            "Algebra II",
+            "Geometry",
+            "Pre-calculus",
+            "Calculus (AP option)",
+            "Statistics (AP option)"
+          ],
+          "weeklyHours": 5
+        },
+        {
+          "name": "Science",
+          "topics": [
+            "Biology (honors/AP)",
+            "Chemistry (honors/AP)",
+            "Physics (honors/AP)",
+            "Environmental science",
+            "Advanced lab work"
+          ],
+          "weeklyHours": 5
+        },
+        {
+          "name": "Social Studies",
+          "topics": [
+            "World history (AP option)",
+            "U.S. history (AP option)",
+            "Government and politics (AP option)",
+            "Economics (AP option)",
+            "Psychology or sociology"
+          ],
+          "weeklyHours": 4
+        },
+        {
+          "name": "Electives & Specialization",
+          "topics": [
+            "Foreign language (2-4 years)",
+            "Advanced arts or music",
+            "Computer science and programming",
+            "Business and entrepreneurship",
+            "Health and physical education"
+          ],
+          "weeklyHours": 6
+        }
+      ]
+    }
+  ],
+  "teachingMethodology": {
+    "approach": "Classical-Charlotte Mason Hybrid",
+    "description": "We combine the rigor of classical education with the living books approach of Charlotte Mason, emphasizing critical thinking, character development, and a love of learning",
+    "principles": [
+      {
+        "name": "Mastery-Based Learning",
+        "description": "Students progress when they demonstrate understanding, not based on arbitrary timelines"
+      },
+      {
+        "name": "Living Books",
+        "description": "Rich, engaging literature and primary sources instead of dry textbooks"
+      },
+      {
+        "name": "Narration",
+        "description": "Students retell what they've learned to develop comprehension and communication skills"
+      },
+      {
+        "name": "Nature Study",
+        "description": "Regular outdoor observation and exploration to connect with the natural world"
+      },
+      {
+        "name": "Short Lessons",
+        "description": "Focused, intentional instruction that respects attention spans and maximizes engagement"
+      },
+      {
+        "name": "Habit Training",
+        "description": "Developing good habits of mind, body, and character alongside academic skills"
+      }
+    ],
+    "dailyStructure": {
+      "morning": "Core academics (math, language arts, science)",
+      "midday": "Read-alouds, nature study, or hands-on projects",
+      "afternoon": "Electives, arts, physical activity, and independent reading"
+    }
+  },
+  "learningMaterials": {
+    "curriculum": [
+      {
+        "category": "Core Curriculum",
+        "providers": [
+          "Classical Conversations",
+          "Sonlight",
+          "The Good and the Beautiful",
+          "Singapore Math",
+          "All About Reading/Spelling"
+        ]
+      },
+      {
+        "category": "Supplemental Resources",
+        "providers": [
+          "Khan Academy",
+          "BrainPOP",
+          "Mystery Science",
+          "Duolingo",
+          "Crash Course"
+        ]
+      },
+      {
+        "category": "Living Books Library",
+        "providers": [
+          "Classic literature collections",
+          "Historical biographies",
+          "Science and nature books",
+          "Quality picture books",
+          "Award-winning fiction"
+        ]
+      }
+    ],
+    "materials": [
+      "Manipulatives for hands-on math learning",
+      "Science experiment kits and supplies",
+      "Art supplies for creative expression",
+      "Educational games and puzzles",
+      "Technology tools (tablets, educational software)"
+    ],
+    "digitalResources": [
+      "Online learning platforms",
+      "Educational videos and documentaries",
+      "Interactive simulations",
+      "Virtual field trips",
+      "Digital libraries and research databases"
+    ]
+  },
+  "programHighlights": {
+    "uniqueFeatures": [
+      {
+        "title": "Personalized Learning Paths",
+        "description": "Curriculum adapts to each child's learning style, pace, and interests",
+        "benefits": [
+          "Work ahead in strengths",
+          "Extra support in challenging areas",
+          "Pursue individual passions",
+          "Flexible scheduling"
+        ]
+      },
+      {
+        "title": "Real-World Learning",
+        "description": "Education extends beyond textbooks into everyday life experiences",
+        "benefits": [
+          "Field trips and community involvement",
+          "Practical life skills integration",
+          "Service learning opportunities",
+          "Mentorship and apprenticeships"
+        ]
+      },
+      {
+        "title": "Family-Centered Education",
+        "description": "Learning happens together, strengthening family bonds",
+        "benefits": [
+          "Shared learning experiences",
+          "Multi-age activities",
+          "Family discussions and projects",
+          "Values-based education"
+        ]
+      },
+      {
+        "title": "College & Career Ready",
+        "description": "Comprehensive preparation for future success",
+        "benefits": [
+          "Rigorous academic standards",
+          "Transcript and portfolio development",
+          "College application support",
+          "Career exploration and planning"
+        ]
+      }
+    ],
+    "outcomes": [
+      "Strong academic foundation across all subjects",
+      "Critical thinking and problem-solving skills",
+      "Self-directed learning abilities",
+      "Excellent communication skills",
+      "Character development and moral reasoning",
+      "College acceptance rates exceeding 95%"
+    ]
+  },
+  "assessmentApproach": {
+    "methods": [
+      {
+        "type": "Ongoing Observation",
+        "description": "Daily monitoring of understanding through discussions and work samples"
+      },
+      {
+        "type": "Portfolio Assessment",
+        "description": "Collection of student work demonstrating growth and mastery over time"
+      },
+      {
+        "type": "Standardized Testing",
+        "description": "Annual achievement tests to benchmark progress (optional but recommended)"
+      },
+      {
+        "type": "Project-Based Assessment",
+        "description": "Demonstrations of learning through presentations, experiments, and creative projects"
+      },
+      {
+        "type": "Self-Assessment",
+        "description": "Students reflect on their own learning and set personal goals"
+      }
+    ],
+    "reportingSchedule": {
+      "quarterly": "Progress reports with detailed subject assessments",
+      "biannual": "Parent-teacher conferences and goal setting",
+      "annual": "Comprehensive evaluation and transcript updates"
+    }
+  },
+  "supportServices": {
+    "parentSupport": [
+      "Weekly planning guides and lesson plans",
+      "Online parent community and forums",
+      "Monthly webinars and training sessions",
+      "One-on-one coaching available",
+      "Curriculum selection guidance"
+    ],
+    "studentSupport": [
+      "Tutoring services for challenging subjects",
+      "Learning disability accommodations",
+      "Gifted and talented enrichment",
+      "Social opportunities and co-ops",
+      "College counseling (high school)"
+    ],
+    "resources": [
+      "Comprehensive curriculum library",
+      "Educational consultant access",
+      "Record-keeping tools and templates",
+      "Legal compliance guidance",
+      "Graduation planning assistance"
+    ]
+  },
+  "accreditation": {
+    "status": "Accredited by National Association of Private Schools",
+    "recognition": [
+      "Transcripts accepted by colleges nationwide",
+      "Meets state homeschool requirements",
+      "NCAA approved courses available",
+      "Dual enrollment partnerships with local colleges"
+    ]
+  }
+}
