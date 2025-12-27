@@ -1,0 +1,1 @@
+npx sharp-cli -i original.jpg -o family-3.jpg --resize 400 400 --quality 85

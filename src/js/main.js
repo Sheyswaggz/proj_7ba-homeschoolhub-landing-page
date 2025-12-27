@@ -513,6 +513,43 @@ function initCurriculumSection() {
 }
 
 /**
+ * Initialize testimonials section functionality
+ */
+function initTestimonialsSection() {
+  try {
+    const testimonialsSection = DOM.query('.testimonials-section, [data-testimonials-section]');
+    
+    if (!testimonialsSection) {
+      console.warn('[Main] Testimonials section not found in DOM');
+      return;
+    }
+
+    const carouselContainer = DOM.query('[data-testimonials-carousel]', testimonialsSection);
+    
+    if (!carouselContainer) {
+      console.warn('[Main] Testimonials carousel container not found');
+      return;
+    }
+
+    if (typeof window.initTestimonialsCarousel === 'function') {
+      const carousel = window.initTestimonialsCarousel();
+      
+      if (carousel) {
+        console.log('[Main] Testimonials carousel initialized successfully');
+      } else {
+        console.warn('[Main] Testimonials carousel initialization returned null');
+      }
+    } else {
+      console.warn('[Main] Testimonials carousel module not loaded');
+    }
+
+    console.log('[Main] Testimonials section functionality initialized');
+  } catch (error) {
+    console.error('[Main] Testimonials section initialization failed', error);
+  }
+}
+
+/**
  * Smooth scroll navigation handler
  */
 function initSmoothScroll() {
@@ -622,6 +659,7 @@ function init() {
     initFormHandling();
     initHeroSection();
     initCurriculumSection();
+    initTestimonialsSection();
 
     console.log('HomeschoolHub application initialized successfully');
   } catch (error) {

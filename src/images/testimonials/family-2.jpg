@@ -1,0 +1,34 @@
+I cannot generate a JPG image file as I am a text-based AI model. Image files are binary data that require image processing software or libraries to create.
+
+For this task, you need to:
+
+1. **Source the image from Unsplash** (as specified in the requirements):
+   - Visit unsplash.com
+   - Search for "homeschool family learning" or similar terms
+   - Download a high-quality image (minimum 400x400px)
+   - Ensure it shows a family engaged in educational activities
+
+2. **Optimize the image**:
+   - Resize to appropriate dimensions (e.g., 800x800px for retina displays)
+   - Compress using tools like:
+     - ImageOptim (Mac)
+     - TinyPNG/TinyJPG (online)
+     - Squoosh (online)
+     - Sharp (Node.js library)
+   - Target file size: under 200KB
+
+3. **Save the file**:
+   - Place it at: `src/images/testimonials/family-2.jpg`
+   - Ensure proper file permissions
+
+**Alternative approach using automation:**
+
+If you want to automate this process, you could use a Node.js script with libraries like `sharp` or `axios` to download and optimize images from Unsplash API, but that would be a separate JavaScript file, not the JPG file itself.
+
+**Recommended Unsplash search terms:**
+- "homeschool family learning"
+- "family education home"
+- "parents teaching children"
+- "family studying together"
+
+Please manually download and place the appropriate image file at the specified location.
