@@ -1,0 +1,236 @@
+{
+  "site": {
+    "name": "HomeschoolHub",
+    "tagline": "Empowering Families Through Quality Home Education",
+    "description": "HomeschoolHub provides comprehensive homeschool curriculum, resources, and support for families seeking quality home education. Discover personalized learning paths, expert guidance, and a supportive community.",
+    "url": "https://homeschoolhub.com",
+    "language": "en-US",
+    "locale": "en_US"
+  },
+  "defaultMeta": {
+    "title": "HomeschoolHub - Quality Home Education Curriculum & Resources",
+    "description": "Discover comprehensive homeschool curriculum, expert resources, and supportive community at HomeschoolHub. Personalized learning paths for K-12 students with proven results.",
+    "keywords": [
+      "homeschool",
+      "home education",
+      "homeschool curriculum",
+      "online learning",
+      "K-12 education",
+      "personalized learning",
+      "educational resources",
+      "homeschool support",
+      "family education",
+      "home learning"
+    ],
+    "author": "HomeschoolHub",
+    "robots": "index, follow",
+    "viewport": "width=device-width, initial-scale=1.0",
+    "themeColor": "#2563eb"
+  },
+  "openGraph": {
+    "type": "website",
+    "siteName": "HomeschoolHub",
+    "title": "HomeschoolHub - Quality Home Education Curriculum & Resources",
+    "description": "Comprehensive homeschool curriculum and resources for families. Join thousands of families achieving educational excellence through personalized home learning.",
+    "image": {
+      "url": "https://homeschoolhub.com/images/og-image.jpg",
+      "width": 1200,
+      "height": 630,
+      "alt": "HomeschoolHub - Empowering Families Through Quality Home Education"
+    },
+    "locale": "en_US"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "site": "@HomeschoolHub",
+    "creator": "@HomeschoolHub",
+    "title": "HomeschoolHub - Quality Home Education Curriculum & Resources",
+    "description": "Comprehensive homeschool curriculum and resources for families. Personalized learning paths with proven results.",
+    "image": "https://homeschoolhub.com/images/twitter-card.jpg",
+    "imageAlt": "HomeschoolHub - Quality Home Education Platform"
+  },
+  "structuredData": {
+    "organization": {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "HomeschoolHub",
+      "alternateName": "Homeschool Hub",
+      "description": "Comprehensive homeschool curriculum provider and educational resource platform for families seeking quality home education.",
+      "url": "https://homeschoolhub.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://homeschoolhub.com/images/logo.png",
+        "width": 250,
+        "height": 60
+      },
+      "image": "https://homeschoolhub.com/images/og-image.jpg",
+      "sameAs": [
+        "https://facebook.com/homeschoolhub",
+        "https://twitter.com/homeschoolhub",
+        "https://instagram.com/homeschoolhub",
+        "https://linkedin.com/company/homeschoolhub"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-HOMESCHOOL",
+        "contactType": "Customer Service",
+        "email": "support@homeschoolhub.com",
+        "availableLanguage": ["English"],
+        "areaServed": "US"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressRegion": "Nationwide"
+      },
+      "foundingDate": "2020",
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": 50
+      }
+    },
+    "localBusiness": {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "HomeschoolHub",
+      "description": "Quality homeschool curriculum and educational resources for families",
+      "url": "https://homeschoolhub.com",
+      "telephone": "+1-555-HOMESCHOOL",
+      "email": "info@homeschoolhub.com",
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    },
+    "website": {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "HomeschoolHub",
+      "url": "https://homeschoolhub.com",
+      "description": "Comprehensive homeschool curriculum and resources platform",
+      "publisher": {
+        "@type": "Organization",
+        "name": "HomeschoolHub"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://homeschoolhub.com/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "HomeschoolHub - Quality Home Education Curriculum & Resources",
+      "description": "Discover comprehensive homeschool curriculum, expert resources, and supportive community. Personalized learning paths for K-12 students with proven results.",
+      "keywords": [
+        "homeschool",
+        "home education",
+        "curriculum",
+        "K-12",
+        "personalized learning"
+      ],
+      "canonical": "https://homeschoolhub.com/",
+      "openGraph": {
+        "title": "HomeschoolHub - Quality Home Education Curriculum & Resources",
+        "description": "Join thousands of families achieving educational excellence through personalized home learning.",
+        "url": "https://homeschoolhub.com/"
+      }
+    },
+    "curriculum": {
+      "title": "Homeschool Curriculum - Comprehensive K-12 Learning Programs | HomeschoolHub",
+      "description": "Explore our comprehensive K-12 homeschool curriculum with personalized learning paths, expert-designed courses, and proven educational outcomes for all grade levels.",
+      "keywords": [
+        "homeschool curriculum",
+        "K-12 curriculum",
+        "learning programs",
+        "educational courses",
+        "grade level curriculum"
+      ],
+      "canonical": "https://homeschoolhub.com/curriculum",
+      "openGraph": {
+        "title": "Comprehensive K-12 Homeschool Curriculum | HomeschoolHub",
+        "description": "Expert-designed curriculum for all grade levels with personalized learning paths and proven results.",
+        "url": "https://homeschoolhub.com/curriculum"
+      }
+    },
+    "contact": {
+      "title": "Contact Us - Get Homeschool Support & Information | HomeschoolHub",
+      "description": "Contact HomeschoolHub for curriculum information, enrollment support, or educational guidance. Our team is ready to help your family succeed in home education.",
+      "keywords": [
+        "contact homeschool",
+        "homeschool support",
+        "enrollment information",
+        "educational guidance"
+      ],
+      "canonical": "https://homeschoolhub.com/contact",
+      "openGraph": {
+        "title": "Contact HomeschoolHub - Get Support & Information",
+        "description": "Reach out for curriculum information, enrollment support, or educational guidance.",
+        "url": "https://homeschoolhub.com/contact"
+      }
+    }
+  },
+  "breadcrumbs": {
+    "enabled": true,
+    "separator": "›",
+    "showHome": true,
+    "homeLabel": "Home"
+  },
+  "sitemap": {
+    "enabled": true,
+    "path": "/sitemap.xml",
+    "changefreq": {
+      "home": "weekly",
+      "curriculum": "monthly",
+      "contact": "yearly"
+    },
+    "priority": {
+      "home": 1.0,
+      "curriculum": 0.8,
+      "contact": 0.5
+    }
+  },
+  "robots": {
+    "enabled": true,
+    "path": "/robots.txt",
+    "rules": [
+      {
+        "userAgent": "*",
+        "allow": "/",
+        "disallow": ["/api/", "/admin/", "/private/"]
+      }
+    ],
+    "sitemap": "https://homeschoolhub.com/sitemap.xml"
+  },
+  "analytics": {
+    "googleAnalytics": {
+      "enabled": true,
+      "trackingId": "G-XXXXXXXXXX"
+    },
+    "googleTagManager": {
+      "enabled": false,
+      "containerId": "GTM-XXXXXXX"
+    }
+  },
+  "verification": {
+    "google": "google-site-verification-code",
+    "bing": "bing-site-verification-code",
+    "pinterest": "pinterest-site-verification-code"
+  },
+  "performance": {
+    "preconnect": [
+      "https://fonts.googleapis.com",
+      "https://fonts.gstatic.com"
+    ],
+    "dnsPrefetch": [
+      "https://www.google-analytics.com"
+    ]
+  }
+}
