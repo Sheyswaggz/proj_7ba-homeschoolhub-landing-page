@@ -1,0 +1,599 @@
+/* ============================================
+   Curriculum Section Styles
+   ============================================ */
+
+/* ============================================
+   Section Container
+   ============================================ */
+
+.curriculum-section {
+  /* Layout */
+  padding-block: var(--space-16);
+  padding-inline: var(--space-4);
+  
+  /* Visual */
+  background-color: var(--color-surface);
+  
+  /* Container */
+  container-type: inline-size;
+  container-name: curriculum;
+}
+
+.curriculum-section__container {
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+}
+
+/* ============================================
+   Section Header
+   ============================================ */
+
+.curriculum-section__header {
+  text-align: center;
+  margin-block-end: var(--space-12);
+}
+
+.curriculum-section__title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+  margin-block-end: var(--space-4);
+  text-wrap: balance;
+}
+
+.curriculum-section__subtitle {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  max-width: 65ch;
+  margin-inline: auto;
+}
+
+/* ============================================
+   Grade Level Grid
+   ============================================ */
+
+.curriculum-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: var(--space-6);
+  margin-block-end: var(--space-12);
+}
+
+/* ============================================
+   Curriculum Card
+   ============================================ */
+
+.curriculum-card {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  
+  /* Visual */
+  background-color: var(--color-surface);
+  border: var(--border-width-1) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-base);
+  overflow: hidden;
+  
+  /* Transitions */
+  transition: 
+    box-shadow var(--transition-base),
+    transform var(--transition-base),
+    border-color var(--transition-base);
+  
+  /* Performance */
+  contain: layout style paint;
+  content-visibility: auto;
+  contain-intrinsic-size: 0 400px;
+}
+
+.curriculum-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+  border-color: var(--color-border-hover);
+}
+
+/* Card Header */
+.curriculum-card__header {
+  padding: var(--space-6);
+  background: linear-gradient(135deg, var(--color-primary-50), var(--color-secondary-50));
+  border-block-end: var(--border-width-1) solid var(--color-border);
+}
+
+.curriculum-card__grade {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding-inline: var(--space-3);
+  padding-block: var(--space-1);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-700);
+  margin-block-end: var(--space-3);
+}
+
+.curriculum-card__title {
+  margin: 0;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-tight);
+}
+
+/* Card Body */
+.curriculum-card__body {
+  padding: var(--space-6);
+  flex: 1;
+}
+
+.curriculum-card__description {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  margin-block-end: var(--space-4);
+}
+
+/* Subject List */
+.curriculum-card__subjects {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.curriculum-card__subject {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+}
+
+.curriculum-card__subject::before {
+  content: '✓';
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background-color: var(--color-success-light);
+  color: var(--color-success-dark);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xs);
+}
+
+/* Card Footer */
+.curriculum-card__footer {
+  padding: var(--space-4) var(--space-6);
+  border-block-start: var(--border-width-1) solid var(--color-border);
+  background-color: var(--color-neutral-50);
+}
+
+.curriculum-card__expand-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-600);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.curriculum-card__expand-btn:hover {
+  color: var(--color-primary-700);
+}
+
+.curriculum-card__expand-btn:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.curriculum-card__expand-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-base);
+}
+
+.curriculum-card__expand-btn[aria-expanded="true"] .curriculum-card__expand-icon {
+  transform: rotate(180deg);
+}
+
+/* Expandable Content */
+.curriculum-card__details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-base);
+}
+
+.curriculum-card__details[aria-hidden="false"] {
+  max-height: 1000px;
+  padding-block-start: var(--space-4);
+}
+
+.curriculum-card__details-content {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+}
+
+/* ============================================
+   Methodology Section
+   ============================================ */
+
+.curriculum-methodology {
+  margin-block-end: var(--space-12);
+  padding: var(--space-8);
+  background: linear-gradient(135deg, var(--color-primary-50), var(--color-accent-50));
+  border-radius: var(--radius-lg);
+  border: var(--border-width-1) solid var(--color-border);
+}
+
+.curriculum-methodology__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-block-end: var(--space-4);
+  text-align: center;
+}
+
+.curriculum-methodology__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: var(--space-6);
+  margin-block-start: var(--space-6);
+}
+
+.curriculum-methodology__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.curriculum-methodology__icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-600);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.curriculum-methodology__item-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.curriculum-methodology__item-description {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ============================================
+   Program Highlights
+   ============================================ */
+
+.curriculum-highlights {
+  margin-block-end: var(--space-12);
+}
+
+.curriculum-highlights__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-block-end: var(--space-6);
+  text-align: center;
+}
+
+.curriculum-highlights__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: var(--space-4);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.curriculum-highlights__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background-color: var(--color-surface);
+  border: var(--border-width-1) solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: 
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
+}
+
+.curriculum-highlights__item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.curriculum-highlights__item-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background-color: var(--color-accent-100);
+  color: var(--color-accent-600);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+.curriculum-highlights__item-content {
+  flex: 1;
+}
+
+.curriculum-highlights__item-title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-block-end: var(--space-1);
+}
+
+.curriculum-highlights__item-description {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ============================================
+   Materials Section
+   ============================================ */
+
+.curriculum-materials {
+  padding: var(--space-8);
+  background-color: var(--color-neutral-50);
+  border-radius: var(--radius-lg);
+  border: var(--border-width-1) solid var(--color-border);
+}
+
+.curriculum-materials__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-block-end: var(--space-4);
+  text-align: center;
+}
+
+.curriculum-materials__description {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  text-align: center;
+  max-width: 65ch;
+  margin-inline: auto;
+  margin-block-end: var(--space-6);
+}
+
+.curriculum-materials__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+  gap: var(--space-4);
+}
+
+.curriculum-materials__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: 
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
+}
+
+.curriculum-materials__item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.curriculum-materials__item-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background-color: var(--color-secondary-100);
+  color: var(--color-secondary-600);
+  font-size: var(--font-size-3xl);
+}
+
+.curriculum-materials__item-name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+/* ============================================
+   Container Query Adjustments
+   ============================================ */
+
+@container curriculum (width > 640px) {
+  .curriculum-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  }
+  
+  .curriculum-card__header {
+    padding: var(--space-8);
+  }
+  
+  .curriculum-card__body {
+    padding: var(--space-8);
+  }
+}
+
+@container curriculum (width > 768px) {
+  .curriculum-section__title {
+    font-size: var(--font-size-5xl);
+  }
+  
+  .curriculum-methodology__grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  }
+}
+
+@container curriculum (width > 1024px) {
+  .curriculum-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .curriculum-highlights__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============================================
+   Responsive Adjustments
+   ============================================ */
+
+@media (width >= 640px) {
+  .curriculum-section {
+    padding-inline: var(--space-6);
+  }
+}
+
+@media (width >= 768px) {
+  .curriculum-section {
+    padding-block: var(--space-20);
+  }
+  
+  .curriculum-methodology {
+    padding: var(--space-10);
+  }
+  
+  .curriculum-materials {
+    padding: var(--space-10);
+  }
+}
+
+@media (width >= 1024px) {
+  .curriculum-section__header {
+    margin-block-end: var(--space-16);
+  }
+}
+
+/* ============================================
+   Reduced Motion Support
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .curriculum-card,
+  .curriculum-card__expand-icon,
+  .curriculum-card__details,
+  .curriculum-highlights__item,
+  .curriculum-materials__item {
+    transition-duration: 0.01ms !important;
+  }
+  
+  .curriculum-card:hover,
+  .curriculum-highlights__item:hover,
+  .curriculum-materials__item:hover {
+    transform: none;
+  }
+}
+
+/* ============================================
+   High Contrast Mode Support
+   ============================================ */
+
+@media (prefers-contrast: high) {
+  .curriculum-card,
+  .curriculum-methodology,
+  .curriculum-highlights__item,
+  .curriculum-materials {
+    border-width: var(--border-width-2);
+  }
+  
+  .curriculum-card__expand-btn {
+    text-decoration: underline;
+  }
+}
+
+/* ============================================
+   Dark Mode Support
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  .curriculum-card__header {
+    background: linear-gradient(135deg, var(--color-primary-900), var(--color-secondary-900));
+  }
+  
+  .curriculum-methodology {
+    background: linear-gradient(135deg, var(--color-primary-900), var(--color-accent-900));
+  }
+  
+  .curriculum-card__footer,
+  .curriculum-materials {
+    background-color: var(--color-neutral-800);
+  }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+  .curriculum-section {
+    padding-block: var(--space-8);
+  }
+  
+  .curriculum-card {
+    page-break-inside: avoid;
+    box-shadow: none;
+    border: var(--border-width-1) solid var(--color-neutral-300);
+  }
+  
+  .curriculum-card__expand-btn {
+    display: none;
+  }
+  
+  .curriculum-card__details {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  
+  .curriculum-grid {
+    gap: var(--space-4);
+  }
+}
