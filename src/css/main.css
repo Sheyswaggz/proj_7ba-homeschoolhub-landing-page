@@ -17,3 +17,6 @@
 
 /* Component Styles - Interactive Elements */
 @import url('./components.css');
+
+/* Hero Section Styles */
+@import url('./hero.css');
