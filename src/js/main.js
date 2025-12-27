@@ -451,6 +451,42 @@ const Validation = {
 };
 
 /**
+ * Initialize SEO optimization module
+ */
+function initSEO() {
+  try {
+    if (typeof window.SEO !== 'undefined' && typeof window.SEO.initializeDefaultSEO === 'function') {
+      console.log('[Main] SEO module initialized successfully');
+    } else {
+      console.warn('[Main] SEO module not loaded');
+    }
+  } catch (error) {
+    console.error('[Main] SEO initialization failed', error);
+  }
+}
+
+/**
+ * Initialize performance optimization module
+ */
+function initPerformance() {
+  try {
+    if (typeof window.LazyLoader !== 'undefined') {
+      console.log('[Main] Performance module initialized successfully');
+    } else {
+      console.warn('[Main] Performance module not loaded');
+    }
+
+    if (typeof window.WebVitals !== 'undefined') {
+      console.log('[Main] Web Vitals tracking initialized');
+    } else {
+      console.warn('[Main] Web Vitals module not loaded');
+    }
+  } catch (error) {
+    console.error('[Main] Performance initialization failed', error);
+  }
+}
+
+/**
  * Initialize hero section functionality with error handling
  */
 function initHeroSection() {
@@ -684,6 +720,8 @@ function init() {
     initCurriculumSection();
     initTestimonialsSection();
     initContactForm();
+    initSEO();
+    initPerformance();
 
     console.log('HomeschoolHub application initialized successfully');
   } catch (error) {
