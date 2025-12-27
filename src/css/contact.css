@@ -1,0 +1,699 @@
+/* ============================================
+   Contact Section Styles - Form & Enrollment
+   ============================================ */
+
+/* ============================================
+   Contact Section Layout
+   ============================================ */
+
+.contact-section {
+  /* Layout */
+  display: grid;
+  gap: var(--space-8);
+  padding-block: var(--space-12);
+  padding-inline: var(--space-4);
+  
+  /* Visual */
+  background: linear-gradient(
+    to bottom,
+    var(--color-surface) 0%,
+    var(--color-neutral-50) 100%
+  );
+  
+  /* Container */
+  container-type: inline-size;
+  container-name: contact;
+}
+
+.contact-section__container {
+  max-width: 1200px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+.contact-section__header {
+  text-align: center;
+  margin-block-end: var(--space-8);
+}
+
+.contact-section__title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-block-end: var(--space-3);
+  text-wrap: balance;
+}
+
+.contact-section__subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  max-width: 60ch;
+  margin-inline: auto;
+  line-height: var(--line-height-relaxed);
+}
+
+/* ============================================
+   Contact Grid Layout
+   ============================================ */
+
+.contact-grid {
+  display: grid;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+@container contact (width >= 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-10);
+  }
+}
+
+@container contact (width >= 1024px) {
+  .contact-grid {
+    grid-template-columns: 3fr 2fr;
+    gap: var(--space-12);
+  }
+}
+
+/* ============================================
+   Contact Form Styles
+   ============================================ */
+
+.contact-form {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  
+  /* Visual */
+  background-color: var(--color-surface);
+  border: var(--border-width-1) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-base);
+  
+  /* Transitions */
+  transition: box-shadow var(--transition-base);
+}
+
+.contact-form:focus-within {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Form Row for Side-by-Side Fields */
+.form-row {
+  display: grid;
+  gap: var(--space-4);
+}
+
+@container contact (width >= 640px) {
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ============================================
+   Form Group Styles
+   ============================================ */
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-block-end: 0;
+}
+
+.contact-form .form-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.contact-form .form-label--required::after {
+  content: '*';
+  color: var(--color-error);
+  font-weight: var(--font-weight-bold);
+}
+
+/* ============================================
+   Form Input Styles
+   ============================================ */
+
+.contact-form .form-input,
+.contact-form .form-select,
+.contact-form .form-textarea {
+  /* Layout */
+  width: 100%;
+  min-height: var(--input-height-base);
+  padding-inline: var(--space-3);
+  padding-block: var(--space-2);
+  
+  /* Typography */
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+  
+  /* Visual */
+  background-color: var(--color-surface);
+  border: var(--border-width-2) solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xs);
+  
+  /* Transitions */
+  transition: 
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.contact-form .form-input::placeholder,
+.contact-form .form-textarea::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+/* Input States */
+.contact-form .form-input:hover,
+.contact-form .form-select:hover,
+.contact-form .form-textarea:hover {
+  border-color: var(--color-border-hover);
+}
+
+.contact-form .form-input:focus,
+.contact-form .form-select:focus,
+.contact-form .form-textarea:focus {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 3px var(--color-primary-100);
+  background-color: var(--color-surface);
+}
+
+.contact-form .form-input:disabled,
+.contact-form .form-select:disabled,
+.contact-form .form-textarea:disabled {
+  background-color: var(--color-neutral-100);
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+  opacity: var(--opacity-60);
+}
+
+/* ============================================
+   Validation States
+   ============================================ */
+
+/* Error State */
+.contact-form .form-input--error,
+.contact-form .form-select--error,
+.contact-form .form-textarea--error {
+  border-color: var(--color-border-error);
+  background-color: var(--color-error-light);
+}
+
+.contact-form .form-input--error:focus,
+.contact-form .form-select--error:focus,
+.contact-form .form-textarea--error:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Success State */
+.contact-form .form-input--success,
+.contact-form .form-select--success,
+.contact-form .form-textarea--success {
+  border-color: var(--color-success);
+  background-color: var(--color-success-light);
+}
+
+.contact-form .form-input--success:focus,
+.contact-form .form-select--success:focus,
+.contact-form .form-textarea--success:focus {
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+}
+
+/* ============================================
+   Validation Messages
+   ============================================ */
+
+.form-error {
+  display: flex;
+  align-items: start;
+  gap: var(--space-1-5);
+  font-size: var(--font-size-sm);
+  color: var(--color-error);
+  margin-block-start: var(--space-1);
+  line-height: var(--line-height-snug);
+}
+
+.form-error::before {
+  content: '⚠';
+  flex-shrink: 0;
+  font-size: var(--font-size-base);
+}
+
+.form-success {
+  display: flex;
+  align-items: start;
+  gap: var(--space-1-5);
+  font-size: var(--font-size-sm);
+  color: var(--color-success);
+  margin-block-start: var(--space-1);
+  line-height: var(--line-height-snug);
+}
+
+.form-success::before {
+  content: '✓';
+  flex-shrink: 0;
+  font-weight: var(--font-weight-bold);
+}
+
+.form-helper {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-block-start: var(--space-1);
+  line-height: var(--line-height-snug);
+}
+
+/* ============================================
+   Textarea Specific Styles
+   ============================================ */
+
+.contact-form .form-textarea {
+  min-height: 150px;
+  resize: vertical;
+  padding-block: var(--space-3);
+  line-height: var(--line-height-relaxed);
+}
+
+/* ============================================
+   Select Specific Styles
+   ============================================ */
+
+.contact-form .form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-3) center;
+  background-size: 12px;
+  padding-inline-end: var(--space-8);
+  cursor: pointer;
+}
+
+/* ============================================
+   Honeypot Field (Hidden Spam Protection)
+   ============================================ */
+
+.contact-form .honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+  tab-index: -1;
+}
+
+/* ============================================
+   Form Submit Button
+   ============================================ */
+
+.contact-form__submit {
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: 100%;
+  min-height: var(--button-height-base);
+  padding-inline: var(--space-6);
+  padding-block: var(--space-3);
+  
+  /* Typography */
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  text-align: center;
+  
+  /* Visual */
+  background-color: var(--color-primary-600);
+  color: var(--color-text-inverse);
+  border: var(--border-width-2) solid transparent;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  
+  /* Transitions */
+  transition: 
+    background-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.contact-form__submit:hover {
+  background-color: var(--color-primary-700);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.contact-form__submit:active {
+  background-color: var(--color-primary-800);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(0);
+}
+
+.contact-form__submit:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+.contact-form__submit:disabled {
+  background-color: var(--color-neutral-300);
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+  pointer-events: none;
+}
+
+/* Loading State */
+.contact-form__submit--loading {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+}
+
+.contact-form__submit--loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  border: 2px solid var(--color-text-inverse);
+  border-radius: var(--radius-full);
+  border-top-color: transparent;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================
+   Success Message
+   ============================================ */
+
+.contact-form__success {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-8);
+  text-align: center;
+  
+  /* Visual */
+  background-color: var(--color-success-light);
+  border: var(--border-width-2) solid var(--color-success);
+  border-radius: var(--radius-lg);
+  
+  /* Animation */
+  animation: slide-in 0.3s ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-form__success-icon {
+  width: 64px;
+  height: 64px;
+  background-color: var(--color-success);
+  color: var(--color-text-inverse);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.contact-form__success-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-success-dark);
+  margin: 0;
+}
+
+.contact-form__success-message {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+/* ============================================
+   Enrollment Information Sidebar
+   ============================================ */
+
+.enrollment-info {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  
+  /* Visual */
+  background-color: var(--color-primary-50);
+  border: var(--border-width-1) solid var(--color-primary-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+}
+
+.enrollment-info__title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin: 0;
+  margin-block-end: var(--space-2);
+}
+
+.enrollment-info__subtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+/* ============================================
+   Enrollment Steps
+   ============================================ */
+
+.enrollment-steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.enrollment-step {
+  display: flex;
+  gap: var(--space-3);
+  align-items: start;
+}
+
+.enrollment-step__number {
+  /* Layout */
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Typography */
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  
+  /* Visual */
+  background-color: var(--color-primary-600);
+  color: var(--color-text-inverse);
+  border-radius: var(--radius-full);
+}
+
+.enrollment-step__content {
+  flex: 1;
+  padding-block-start: var(--space-0-5);
+}
+
+.enrollment-step__title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin: 0;
+  margin-block-end: var(--space-1);
+}
+
+.enrollment-step__description {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+/* ============================================
+   Contact Information
+   ============================================ */
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding-block-start: var(--space-6);
+  border-block-start: var(--border-width-1) solid var(--color-primary-200);
+}
+
+.contact-info__item {
+  display: flex;
+  align-items: start;
+  gap: var(--space-3);
+}
+
+.contact-info__icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--color-primary-600);
+}
+
+.contact-info__content {
+  flex: 1;
+}
+
+.contact-info__label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin: 0;
+  margin-block-end: var(--space-0-5);
+}
+
+.contact-info__value {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.contact-info__value a {
+  color: var(--color-primary-600);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.contact-info__value a:hover {
+  color: var(--color-primary-700);
+  text-decoration: underline;
+}
+
+/* ============================================
+   Responsive Adjustments
+   ============================================ */
+
+@container contact (width >= 640px) {
+  .contact-form {
+    padding: var(--space-8);
+  }
+  
+  .enrollment-info {
+    padding: var(--space-8);
+  }
+}
+
+@container contact (width >= 768px) {
+  .contact-section__title {
+    font-size: var(--font-size-5xl);
+  }
+  
+  .contact-form__submit {
+    width: auto;
+    min-width: 200px;
+  }
+}
+
+/* ============================================
+   Reduced Motion Support
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-form,
+  .contact-form .form-input,
+  .contact-form .form-select,
+  .contact-form .form-textarea,
+  .contact-form__submit {
+    transition-duration: 0.01ms !important;
+  }
+  
+  .contact-form__success {
+    animation: none;
+  }
+  
+  .contact-form__submit--loading::after {
+    animation: none;
+  }
+}
+
+/* ============================================
+   High Contrast Mode Support
+   ============================================ */
+
+@media (prefers-contrast: high) {
+  .contact-form .form-input,
+  .contact-form .form-select,
+  .contact-form .form-textarea {
+    border-width: var(--border-width-2);
+  }
+  
+  .contact-form__submit {
+    border-width: var(--border-width-2);
+  }
+  
+  .form-error,
+  .form-success {
+    font-weight: var(--font-weight-semibold);
+  }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+  .contact-section {
+    background: white;
+    padding-block: var(--space-4);
+  }
+  
+  .contact-form__submit {
+    display: none;
+  }
+  
+  .contact-form .form-input,
+  .contact-form .form-select,
+  .contact-form .form-textarea {
+    border: 1px solid black;
+  }
+}

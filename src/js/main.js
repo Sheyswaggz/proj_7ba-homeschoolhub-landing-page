@@ -550,6 +550,29 @@ function initTestimonialsSection() {
 }
 
 /**
+ * Initialize contact form functionality
+ */
+function initContactForm() {
+  try {
+    const contactForm = DOM.query('#contact-form');
+    
+    if (!contactForm) {
+      console.warn('[Main] Contact form not found in DOM');
+      return;
+    }
+
+    if (typeof window.initContactForm === 'function') {
+      window.initContactForm();
+      console.log('[Main] Contact form initialized successfully');
+    } else {
+      console.warn('[Main] Contact form module not loaded');
+    }
+  } catch (error) {
+    console.error('[Main] Contact form initialization failed', error);
+  }
+}
+
+/**
  * Smooth scroll navigation handler
  */
 function initSmoothScroll() {
@@ -660,6 +683,7 @@ function init() {
     initHeroSection();
     initCurriculumSection();
     initTestimonialsSection();
+    initContactForm();
 
     console.log('HomeschoolHub application initialized successfully');
   } catch (error) {

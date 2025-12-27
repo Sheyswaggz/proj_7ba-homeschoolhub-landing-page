@@ -1,0 +1,234 @@
+{
+  "enrollmentProcess": {
+    "title": "Enrollment Process",
+    "description": "Join our homeschool community in three simple steps",
+    "steps": [
+      {
+        "id": 1,
+        "title": "Submit Inquiry",
+        "description": "Fill out our contact form with your family's information and educational goals",
+        "icon": "form",
+        "duration": "5 minutes",
+        "details": [
+          "Provide parent/guardian contact information",
+          "Share student's current grade level",
+          "Describe your educational objectives",
+          "Ask any questions you may have"
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Consultation Call",
+        "description": "Schedule a personalized consultation to discuss your child's needs and our program",
+        "icon": "phone",
+        "duration": "30-45 minutes",
+        "details": [
+          "Review curriculum options and learning approaches",
+          "Discuss your child's learning style and interests",
+          "Explore scheduling and support options",
+          "Address any concerns or questions",
+          "Receive customized program recommendations"
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Complete Enrollment",
+        "description": "Finalize paperwork and begin your homeschool journey",
+        "icon": "check",
+        "duration": "1-2 weeks",
+        "details": [
+          "Complete enrollment forms and agreements",
+          "Submit required documentation",
+          "Set up student account and access materials",
+          "Receive welcome packet and orientation schedule",
+          "Connect with your educational support team"
+        ]
+      }
+    ],
+    "requirements": {
+      "title": "Enrollment Requirements",
+      "description": "What you'll need to get started",
+      "items": [
+        {
+          "category": "Documentation",
+          "items": [
+            "Student's birth certificate or proof of age",
+            "Previous school records (if applicable)",
+            "Immunization records (as required by state law)",
+            "Parent/guardian identification"
+          ]
+        },
+        {
+          "category": "Information",
+          "items": [
+            "Student's educational history and current grade level",
+            "Learning preferences and special needs (if any)",
+            "Educational goals and objectives",
+            "Parent/guardian contact information"
+          ]
+        },
+        {
+          "category": "Commitment",
+          "items": [
+            "Agreement to program policies and procedures",
+            "Commitment to active parent involvement",
+            "Understanding of state homeschool requirements",
+            "Willingness to maintain regular communication"
+          ]
+        }
+      ]
+    },
+    "timeline": {
+      "title": "Enrollment Timeline",
+      "description": "From inquiry to first day",
+      "phases": [
+        {
+          "phase": "Initial Contact",
+          "timeframe": "Day 1",
+          "activities": [
+            "Submit contact form",
+            "Receive confirmation email",
+            "Schedule consultation call"
+          ]
+        },
+        {
+          "phase": "Consultation",
+          "timeframe": "Days 2-7",
+          "activities": [
+            "Attend personalized consultation",
+            "Review program materials",
+            "Receive enrollment packet"
+          ]
+        },
+        {
+          "phase": "Application",
+          "timeframe": "Days 8-14",
+          "activities": [
+            "Complete enrollment forms",
+            "Submit required documentation",
+            "Process application and payment"
+          ]
+        },
+        {
+          "phase": "Onboarding",
+          "timeframe": "Days 15-21",
+          "activities": [
+            "Receive welcome materials",
+            "Set up student accounts",
+            "Attend orientation session",
+            "Begin learning journey"
+          ]
+        }
+      ],
+      "note": "Timeline may vary based on individual circumstances and documentation availability"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "categories": [
+        {
+          "category": "Getting Started",
+          "questions": [
+            {
+              "question": "When can I enroll my child?",
+              "answer": "We accept enrollments year-round, allowing families to start when it's best for them. Most families begin at the start of a semester, but mid-year enrollment is welcome."
+            },
+            {
+              "question": "What grades do you serve?",
+              "answer": "We provide comprehensive curriculum and support for students in kindergarten through 12th grade, with age-appropriate materials and guidance for each level."
+            },
+            {
+              "question": "Is there an application fee?",
+              "answer": "There is no application fee. We believe in making quality homeschool education accessible to all families. Tuition and material fees are discussed during the consultation."
+            }
+          ]
+        },
+        {
+          "category": "Requirements",
+          "questions": [
+            {
+              "question": "Do I need teaching experience?",
+              "answer": "No teaching experience is required. We provide comprehensive curriculum, teaching guides, and ongoing support to help parents successfully guide their children's education."
+            },
+            {
+              "question": "What are the state requirements?",
+              "answer": "Homeschool requirements vary by state. During your consultation, we'll review your state's specific requirements and help ensure you meet all legal obligations."
+            },
+            {
+              "question": "How much time commitment is required?",
+              "answer": "Time commitment varies by grade level and learning style. Generally, expect 3-5 hours daily for elementary students and 5-7 hours for high school students, plus parent preparation time."
+            }
+          ]
+        },
+        {
+          "category": "Program Details",
+          "questions": [
+            {
+              "question": "What curriculum do you use?",
+              "answer": "We offer a flexible, comprehensive curriculum covering all core subjects with options for different learning styles. You'll choose materials during consultation based on your child's needs."
+            },
+            {
+              "question": "What support do you provide?",
+              "answer": "Families receive ongoing educational support including curriculum guidance, teaching resources, progress tracking tools, and access to our community of homeschool families."
+            },
+            {
+              "question": "Can my child participate in extracurricular activities?",
+              "answer": "Yes! We facilitate connections to co-op classes, field trips, sports programs, and social activities to ensure a well-rounded educational experience."
+            }
+          ]
+        }
+      ]
+    },
+    "nextSteps": {
+      "title": "Ready to Get Started?",
+      "description": "Take the first step toward your child's personalized education",
+      "actions": [
+        {
+          "action": "Complete the contact form below",
+          "priority": 1
+        },
+        {
+          "action": "Schedule your free consultation",
+          "priority": 2
+        },
+        {
+          "action": "Prepare any questions you'd like to discuss",
+          "priority": 3
+        }
+      ],
+      "supportContact": {
+        "email": "enrollment@homeschoolhub.com",
+        "phone": "(555) 123-4567",
+        "hours": "Monday-Friday, 9:00 AM - 5:00 PM EST"
+      }
+    },
+    "benefits": {
+      "title": "Why Choose Our Program",
+      "items": [
+        {
+          "benefit": "Personalized Learning",
+          "description": "Curriculum tailored to your child's unique learning style, pace, and interests"
+        },
+        {
+          "benefit": "Flexible Scheduling",
+          "description": "Learn on your family's schedule with the freedom to adjust as needed"
+        },
+        {
+          "benefit": "Comprehensive Support",
+          "description": "Ongoing guidance from experienced homeschool educators and support staff"
+        },
+        {
+          "benefit": "Community Connection",
+          "description": "Access to a network of homeschool families for socialization and collaboration"
+        },
+        {
+          "benefit": "Quality Materials",
+          "description": "Carefully curated curriculum and resources for all subjects and grade levels"
+        },
+        {
+          "benefit": "Academic Excellence",
+          "description": "Proven track record of student achievement and college preparation"
+        }
+      ]
+    }
+  }
+}
