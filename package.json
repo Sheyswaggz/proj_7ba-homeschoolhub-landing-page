@@ -1,0 +1,55 @@
+{
+  "name": "homeschoolhub-landing",
+  "version": "1.0.0",
+  "description": "HomeschoolHub Landing Page - Static site for homeschool resources",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "live-server src --port=3000 --open=/index.html",
+    "dev": "npm run start",
+    "build": "npm run clean && npm run build:html && npm run build:css && npm run build:js && npm run build:images",
+    "build:html": "node scripts/copy-html.js",
+    "build:css": "postcss src/css/**/*.css --dir dist/css --config postcss.config.js",
+    "build:js": "node scripts/copy-js.js",
+    "build:images": "node scripts/optimize-images.js",
+    "clean": "node scripts/clean.js",
+    "test": "echo \"No tests specified\" && exit 0",
+    "lint": "npm run lint:css && npm run lint:js",
+    "lint:css": "stylelint \"src/css/**/*.css\"",
+    "lint:js": "eslint \"src/js/**/*.js\"",
+    "validate": "html-validate \"src/**/*.html\"",
+    "preview": "live-server dist --port=8080 --open=/index.html"
+  },
+  "keywords": [
+    "homeschool",
+    "education",
+    "landing-page",
+    "static-site"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.2",
+    "eslint": "^9.0.0",
+    "fs-extra": "^11.2.0",
+    "glob": "^10.3.10",
+    "html-validate": "^8.9.1",
+    "imagemin": "^8.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^10.0.1",
+    "live-server": "^1.2.2",
+    "postcss": "^8.4.32",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.0.0",
+    "stylelint": "^16.1.0",
+    "stylelint-config-standard": "^36.0.0",
+    "terser": "^5.26.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
