@@ -1,0 +1,663 @@
+/* ============================================
+   Component Styles - Interactive Elements
+   ============================================ */
+
+/* ============================================
+   Button Component - Base Styles
+   ============================================ */
+
+.button {
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  
+  /* Sizing - Touch-friendly minimum */
+  min-height: var(--button-height-base);
+  min-width: var(--button-height-base);
+  padding-inline: var(--space-4);
+  padding-block: var(--space-2);
+  
+  /* Typography */
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  
+  /* Visual */
+  border: var(--border-width-2) solid transparent;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-600);
+  color: var(--color-text-inverse);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  user-select: none;
+  
+  /* Transitions */
+  transition: 
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+  
+  /* Performance */
+  will-change: transform;
+}
+
+/* Button States */
+.button:hover {
+  background-color: var(--color-primary-700);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.button:active {
+  background-color: var(--color-primary-800);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(0);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+.button:disabled,
+.button[aria-disabled="true"] {
+  background-color: var(--color-neutral-300);
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+  pointer-events: none;
+}
+
+/* ============================================
+   Button Variants
+   ============================================ */
+
+/* Primary Button (default) */
+.button--primary {
+  background-color: var(--color-primary-600);
+  color: var(--color-text-inverse);
+}
+
+.button--primary:hover {
+  background-color: var(--color-primary-700);
+}
+
+.button--primary:active {
+  background-color: var(--color-primary-800);
+}
+
+/* Secondary Button */
+.button--secondary {
+  background-color: var(--color-secondary-600);
+  color: var(--color-text-inverse);
+}
+
+.button--secondary:hover {
+  background-color: var(--color-secondary-700);
+}
+
+.button--secondary:active {
+  background-color: var(--color-secondary-800);
+}
+
+/* Accent Button */
+.button--accent {
+  background-color: var(--color-accent-600);
+  color: var(--color-text-inverse);
+}
+
+.button--accent:hover {
+  background-color: var(--color-accent-700);
+}
+
+.button--accent:active {
+  background-color: var(--color-accent-800);
+}
+
+/* Outline Button */
+.button--outline {
+  background-color: transparent;
+  border-color: var(--color-primary-600);
+  color: var(--color-primary-600);
+  box-shadow: none;
+}
+
+.button--outline:hover {
+  background-color: var(--color-primary-50);
+  border-color: var(--color-primary-700);
+  color: var(--color-primary-700);
+}
+
+.button--outline:active {
+  background-color: var(--color-primary-100);
+  border-color: var(--color-primary-800);
+  color: var(--color-primary-800);
+}
+
+/* Ghost Button */
+.button--ghost {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-primary-600);
+  box-shadow: none;
+}
+
+.button--ghost:hover {
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-700);
+}
+
+.button--ghost:active {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-800);
+}
+
+/* Success Button */
+.button--success {
+  background-color: var(--color-success);
+  color: var(--color-text-inverse);
+}
+
+.button--success:hover {
+  background-color: var(--color-success-dark);
+}
+
+/* Warning Button */
+.button--warning {
+  background-color: var(--color-warning);
+  color: var(--color-text-inverse);
+}
+
+.button--warning:hover {
+  background-color: var(--color-warning-dark);
+}
+
+/* Error Button */
+.button--error {
+  background-color: var(--color-error);
+  color: var(--color-text-inverse);
+}
+
+.button--error:hover {
+  background-color: var(--color-error-dark);
+}
+
+/* ============================================
+   Button Sizes
+   ============================================ */
+
+.button--sm {
+  min-height: var(--button-height-sm);
+  min-width: var(--button-height-sm);
+  padding-inline: var(--space-3);
+  padding-block: var(--space-1);
+  font-size: var(--font-size-sm);
+}
+
+.button--lg {
+  min-height: var(--button-height-lg);
+  min-width: var(--button-height-lg);
+  padding-inline: var(--space-6);
+  padding-block: var(--space-3);
+  font-size: var(--font-size-lg);
+}
+
+/* Full Width Button */
+.button--full {
+  width: 100%;
+}
+
+/* Icon Button */
+.button--icon {
+  padding-inline: var(--space-2);
+  aspect-ratio: 1;
+}
+
+/* ============================================
+   Card Component - Base Styles
+   ============================================ */
+
+.card {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  
+  /* Visual */
+  background-color: var(--color-surface);
+  border: var(--border-width-1) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-base);
+  overflow: hidden;
+  
+  /* Transitions */
+  transition: 
+    box-shadow var(--transition-base),
+    transform var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+  border-color: var(--color-border-hover);
+}
+
+/* Card Header */
+.card__header {
+  padding: var(--space-4);
+  border-block-end: var(--border-width-1) solid var(--color-border);
+}
+
+.card__title {
+  margin: 0;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.card__subtitle {
+  margin-block-start: var(--space-1);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/* Card Body */
+.card__body {
+  padding: var(--space-4);
+  flex: 1;
+}
+
+/* Card Footer */
+.card__footer {
+  padding: var(--space-4);
+  border-block-start: var(--border-width-1) solid var(--color-border);
+  background-color: var(--color-neutral-50);
+}
+
+/* Card Image */
+.card__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* ============================================
+   Card Variants
+   ============================================ */
+
+.card--elevated {
+  border: none;
+  box-shadow: var(--shadow-lg);
+}
+
+.card--elevated:hover {
+  box-shadow: var(--shadow-xl);
+}
+
+.card--outlined {
+  border-width: var(--border-width-2);
+  box-shadow: none;
+}
+
+.card--interactive {
+  cursor: pointer;
+  user-select: none;
+}
+
+.card--interactive:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-base);
+}
+
+/* ============================================
+   Form Elements - Base Styles
+   ============================================ */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-block-end: var(--space-4);
+}
+
+.form-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.form-label--required::after {
+  content: ' *';
+  color: var(--color-error);
+}
+
+/* Input Base Styles */
+.form-input,
+.form-textarea,
+.form-select {
+  /* Layout */
+  width: 100%;
+  min-height: var(--input-height-base);
+  padding-inline: var(--space-3);
+  padding-block: var(--space-2);
+  
+  /* Typography */
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+  
+  /* Visual */
+  background-color: var(--color-surface);
+  border: var(--border-width-2) solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xs);
+  
+  /* Transitions */
+  transition: 
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+/* Input States */
+.form-input:hover,
+.form-textarea:hover,
+.form-select:hover {
+  border-color: var(--color-border-hover);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 3px var(--color-primary-100);
+}
+
+.form-input:disabled,
+.form-textarea:disabled,
+.form-select:disabled {
+  background-color: var(--color-neutral-100);
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+  opacity: var(--opacity-60);
+}
+
+/* Error State */
+.form-input--error,
+.form-textarea--error,
+.form-select--error {
+  border-color: var(--color-border-error);
+}
+
+.form-input--error:focus,
+.form-textarea--error:focus,
+.form-select--error:focus {
+  box-shadow: 0 0 0 3px var(--color-error-light);
+}
+
+/* Success State */
+.form-input--success,
+.form-textarea--success,
+.form-select--success {
+  border-color: var(--color-success);
+}
+
+.form-input--success:focus,
+.form-textarea--success:focus,
+.form-select--success:focus {
+  box-shadow: 0 0 0 3px var(--color-success-light);
+}
+
+/* Textarea Specific */
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+  padding-block: var(--space-3);
+}
+
+/* Select Specific */
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-3) center;
+  background-size: 12px;
+  padding-inline-end: var(--space-8);
+}
+
+/* Form Helper Text */
+.form-helper {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-block-start: var(--space-1);
+}
+
+.form-error {
+  font-size: var(--font-size-sm);
+  color: var(--color-error);
+  margin-block-start: var(--space-1);
+}
+
+/* ============================================
+   Checkbox and Radio Styles
+   ============================================ */
+
+.form-checkbox,
+.form-radio {
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+  user-select: none;
+  min-height: var(--touch-target-min);
+}
+
+.form-checkbox input[type="checkbox"],
+.form-radio input[type="radio"] {
+  /* Custom styling */
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: var(--border-width-2) solid var(--color-border);
+  background-color: var(--color-surface);
+  cursor: pointer;
+  transition: 
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.form-checkbox input[type="checkbox"] {
+  border-radius: var(--radius-sm);
+}
+
+.form-radio input[type="radio"] {
+  border-radius: var(--radius-full);
+}
+
+.form-checkbox input[type="checkbox"]:checked,
+.form-radio input[type="radio"]:checked {
+  background-color: var(--color-primary-600);
+  border-color: var(--color-primary-600);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='white' d='M13.5 3.5L6 11 2.5 7.5l1-1L6 9l6.5-6.5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px;
+}
+
+.form-radio input[type="radio"]:checked {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ccircle fill='white' cx='8' cy='8' r='4'/%3E%3C/svg%3E");
+}
+
+.form-checkbox input[type="checkbox"]:focus-visible,
+.form-radio input[type="radio"]:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+.form-checkbox input[type="checkbox"]:disabled,
+.form-radio input[type="radio"]:disabled {
+  background-color: var(--color-neutral-100);
+  border-color: var(--color-neutral-300);
+  cursor: not-allowed;
+  opacity: var(--opacity-60);
+}
+
+/* ============================================
+   Badge Component
+   ============================================ */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: var(--space-2);
+  padding-block: var(--space-0-5);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-700);
+}
+
+.badge--secondary {
+  background-color: var(--color-secondary-100);
+  color: var(--color-secondary-700);
+}
+
+.badge--success {
+  background-color: var(--color-success-light);
+  color: var(--color-success-dark);
+}
+
+.badge--warning {
+  background-color: var(--color-warning-light);
+  color: var(--color-warning-dark);
+}
+
+.badge--error {
+  background-color: var(--color-error-light);
+  color: var(--color-error-dark);
+}
+
+/* ============================================
+   Alert Component
+   ============================================ */
+
+.alert {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  border-inline-start: 4px solid;
+}
+
+.alert--info {
+  background-color: var(--color-info-light);
+  border-color: var(--color-info);
+  color: var(--color-info-dark);
+}
+
+.alert--success {
+  background-color: var(--color-success-light);
+  border-color: var(--color-success);
+  color: var(--color-success-dark);
+}
+
+.alert--warning {
+  background-color: var(--color-warning-light);
+  border-color: var(--color-warning);
+  color: var(--color-warning-dark);
+}
+
+.alert--error {
+  background-color: var(--color-error-light);
+  border-color: var(--color-error);
+  color: var(--color-error-dark);
+}
+
+/* ============================================
+   Responsive Adjustments
+   ============================================ */
+
+@media (width >= 640px) {
+  .button {
+    min-height: var(--button-height-base);
+  }
+  
+  .card__header,
+  .card__body,
+  .card__footer {
+    padding: var(--space-6);
+  }
+}
+
+@media (width >= 768px) {
+  .form-input,
+  .form-textarea,
+  .form-select {
+    font-size: var(--font-size-base);
+  }
+}
+
+/* ============================================
+   Reduced Motion Support
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .card,
+  .form-input,
+  .form-textarea,
+  .form-select {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================
+   High Contrast Mode Support
+   ============================================ */
+
+@media (prefers-contrast: high) {
+  .button {
+    border-width: var(--border-width-2);
+  }
+  
+  .form-input,
+  .form-textarea,
+  .form-select {
+    border-width: var(--border-width-2);
+  }
+}
+
+/* ============================================
+   Dark Mode Support
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  .card__footer {
+    background-color: var(--color-neutral-800);
+  }
+  
+  .form-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23fff' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  }
+}
