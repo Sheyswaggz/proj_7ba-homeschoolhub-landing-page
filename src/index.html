@@ -68,40 +68,294 @@
       </div>
     </section>
     
-    <section id="curriculum" aria-labelledby="curriculum-title">
-      <div class="section-container">
-        <header>
-          <h2 id="curriculum-title">Our Curriculum</h2>
-          <p class="section-description">Flexible, engaging, and comprehensive learning programs for all ages</p>
+    <section id="curriculum" class="curriculum-section" aria-labelledby="curriculum-title" data-curriculum-section>
+      <div class="curriculum-section__container">
+        <header class="curriculum-section__header">
+          <h2 id="curriculum-title" class="curriculum-section__title">Our Comprehensive Curriculum</h2>
+          <p class="curriculum-section__subtitle">Flexible, engaging, and comprehensive learning programs designed for K-12 students with personalized paths that adapt to each child's unique learning style and pace</p>
         </header>
         
         <div class="curriculum-grid">
-          <article class="curriculum-card">
-            <div class="card-icon" aria-hidden="true">
-              <span>📚</span>
+          <article class="curriculum-card" data-curriculum-item data-curriculum-id="elementary">
+            <div class="curriculum-card__header">
+              <span class="curriculum-card__grade">K-5</span>
+              <h3 class="curriculum-card__title">Elementary Program</h3>
             </div>
-            <h3>Elementary Program</h3>
-            <p>Foundation-building curriculum for grades K-5 with interactive lessons and hands-on activities</p>
-            <a href="#contact" class="card-link" aria-label="Learn more about elementary program">Learn More</a>
+            
+            <div class="curriculum-card__body">
+              <p class="curriculum-card__description">Building strong foundations in core subjects through hands-on learning and exploration. Ages 5-11 years.</p>
+              
+              <ul class="curriculum-card__subjects" role="list">
+                <li class="curriculum-card__subject">Language Arts - Phonics & Reading</li>
+                <li class="curriculum-card__subject">Mathematics - Hands-on Learning</li>
+                <li class="curriculum-card__subject">Science - Experiments & Nature Study</li>
+                <li class="curriculum-card__subject">Social Studies - Community & Culture</li>
+                <li class="curriculum-card__subject">Arts & Enrichment Activities</li>
+              </ul>
+              
+              <div class="curriculum-card__details" data-curriculum-content id="elementary-details" aria-hidden="true">
+                <div class="curriculum-card__details-content">
+                  <h4>Program Highlights:</h4>
+                  <ul role="list">
+                    <li>Phonics-based reading instruction with living books</li>
+                    <li>Hands-on math manipulatives for concrete understanding</li>
+                    <li>Weekly science experiments and nature studies</li>
+                    <li>Creative arts integration across all subjects</li>
+                    <li>Social-emotional learning and character development</li>
+                  </ul>
+                  <p><strong>Weekly Hours:</strong> 17 hours of structured learning with flexible scheduling</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="curriculum-card__footer">
+              <button 
+                type="button"
+                class="curriculum-card__expand-btn"
+                data-curriculum-trigger
+                aria-expanded="false"
+                aria-controls="elementary-details"
+                id="elementary-trigger"
+              >
+                <span>View Details</span>
+                <svg class="curriculum-card__expand-icon" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 11L3 6h10l-5 5z"/>
+                </svg>
+              </button>
+            </div>
           </article>
           
-          <article class="curriculum-card">
-            <div class="card-icon" aria-hidden="true">
-              <span>🔬</span>
+          <article class="curriculum-card" data-curriculum-item data-curriculum-id="middle">
+            <div class="curriculum-card__header">
+              <span class="curriculum-card__grade">6-8</span>
+              <h3 class="curriculum-card__title">Middle School Program</h3>
             </div>
-            <h3>Middle School Program</h3>
-            <p>Comprehensive middle school curriculum covering core subjects with project-based learning</p>
-            <a href="#contact" class="card-link" aria-label="Learn more about middle school program">Learn More</a>
+            
+            <div class="curriculum-card__body">
+              <p class="curriculum-card__description">Developing critical thinking and independent learning skills across all disciplines. Ages 11-14 years.</p>
+              
+              <ul class="curriculum-card__subjects" role="list">
+                <li class="curriculum-card__subject">Language Arts - Advanced Reading & Writing</li>
+                <li class="curriculum-card__subject">Mathematics - Pre-Algebra & Algebra I</li>
+                <li class="curriculum-card__subject">Science - Laboratory Experiences</li>
+                <li class="curriculum-card__subject">Social Studies - World & American History</li>
+                <li class="curriculum-card__subject">Electives - Technology, Arts & More</li>
+              </ul>
+              
+              <div class="curriculum-card__details" data-curriculum-content id="middle-details" aria-hidden="true">
+                <div class="curriculum-card__details-content">
+                  <h4>Program Highlights:</h4>
+                  <ul role="list">
+                    <li>Project-based learning approach for real-world application</li>
+                    <li>Pre-algebra and Algebra I preparation with mastery focus</li>
+                    <li>Laboratory science experiences in life, physical, and earth sciences</li>
+                    <li>Research and writing skills development</li>
+                    <li>Technology integration and digital literacy</li>
+                  </ul>
+                  <p><strong>Weekly Hours:</strong> 21 hours of structured learning with increased independence</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="curriculum-card__footer">
+              <button 
+                type="button"
+                class="curriculum-card__expand-btn"
+                data-curriculum-trigger
+                aria-expanded="false"
+                aria-controls="middle-details"
+                id="middle-trigger"
+              >
+                <span>View Details</span>
+                <svg class="curriculum-card__expand-icon" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 11L3 6h10l-5 5z"/>
+                </svg>
+              </button>
+            </div>
           </article>
           
-          <article class="curriculum-card">
-            <div class="card-icon" aria-hidden="true">
-              <span>🎓</span>
+          <article class="curriculum-card" data-curriculum-item data-curriculum-id="high">
+            <div class="curriculum-card__header">
+              <span class="curriculum-card__grade">9-12</span>
+              <h3 class="curriculum-card__title">High School Program</h3>
             </div>
-            <h3>High School Program</h3>
-            <p>College-prep curriculum with advanced courses and personalized learning paths</p>
-            <a href="#contact" class="card-link" aria-label="Learn more about high school program">Learn More</a>
+            
+            <div class="curriculum-card__body">
+              <p class="curriculum-card__description">College-preparatory curriculum with advanced coursework and real-world applications. Ages 14-18 years.</p>
+              
+              <ul class="curriculum-card__subjects" role="list">
+                <li class="curriculum-card__subject">English - Literature & Composition</li>
+                <li class="curriculum-card__subject">Mathematics - Algebra II through Calculus</li>
+                <li class="curriculum-card__subject">Science - Biology, Chemistry, Physics (AP)</li>
+                <li class="curriculum-card__subject">Social Studies - History & Government (AP)</li>
+                <li class="curriculum-card__subject">Electives - Foreign Language & More</li>
+              </ul>
+              
+              <div class="curriculum-card__details" data-curriculum-content id="high-details" aria-hidden="true">
+                <div class="curriculum-card__details-content">
+                  <h4>Program Highlights:</h4>
+                  <ul role="list">
+                    <li>College-prep and honors courses with rigorous standards</li>
+                    <li>Advanced Placement (AP) options in multiple subjects</li>
+                    <li>Dual enrollment opportunities with local colleges</li>
+                    <li>Career and college counseling services</li>
+                    <li>Portfolio development and transcript preparation</li>
+                  </ul>
+                  <p><strong>Weekly Hours:</strong> 25 hours of structured learning with college-level rigor</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="curriculum-card__footer">
+              <button 
+                type="button"
+                class="curriculum-card__expand-btn"
+                data-curriculum-trigger
+                aria-expanded="false"
+                aria-controls="high-details"
+                id="high-trigger"
+              >
+                <span>View Details</span>
+                <svg class="curriculum-card__expand-icon" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 11L3 6h10l-5 5z"/>
+                </svg>
+              </button>
+            </div>
           </article>
+        </div>
+        
+        <div class="curriculum-methodology">
+          <h3 class="curriculum-methodology__title">Our Teaching Methodology</h3>
+          <p style="text-align: center; color: var(--color-text-secondary); margin-block-end: var(--space-6);">Classical-Charlotte Mason Hybrid approach combining rigor with living books, emphasizing critical thinking, character development, and a love of learning</p>
+          
+          <div class="curriculum-methodology__grid">
+            <div class="curriculum-methodology__item">
+              <div class="curriculum-methodology__icon" aria-hidden="true">📖</div>
+              <h4 class="curriculum-methodology__item-title">Mastery-Based Learning</h4>
+              <p class="curriculum-methodology__item-description">Students progress when they demonstrate understanding, not based on arbitrary timelines</p>
+            </div>
+            
+            <div class="curriculum-methodology__item">
+              <div class="curriculum-methodology__icon" aria-hidden="true">📚</div>
+              <h4 class="curriculum-methodology__item-title">Living Books</h4>
+              <p class="curriculum-methodology__item-description">Rich, engaging literature and primary sources instead of dry textbooks</p>
+            </div>
+            
+            <div class="curriculum-methodology__item">
+              <div class="curriculum-methodology__icon" aria-hidden="true">🗣️</div>
+              <h4 class="curriculum-methodology__item-title">Narration</h4>
+              <p class="curriculum-methodology__item-description">Students retell what they've learned to develop comprehension and communication skills</p>
+            </div>
+            
+            <div class="curriculum-methodology__item">
+              <div class="curriculum-methodology__icon" aria-hidden="true">🌳</div>
+              <h4 class="curriculum-methodology__item-title">Nature Study</h4>
+              <p class="curriculum-methodology__item-description">Regular outdoor observation and exploration to connect with the natural world</p>
+            </div>
+            
+            <div class="curriculum-methodology__item">
+              <div class="curriculum-methodology__icon" aria-hidden="true">⏱️</div>
+              <h4 class="curriculum-methodology__item-title">Short Lessons</h4>
+              <p class="curriculum-methodology__item-description">Focused, intentional instruction that respects attention spans and maximizes engagement</p>
+            </div>
+            
+            <div class="curriculum-methodology__item">
+              <div class="curriculum-methodology__icon" aria-hidden="true">⭐</div>
+              <h4 class="curriculum-methodology__item-title">Habit Training</h4>
+              <p class="curriculum-methodology__item-description">Developing good habits of mind, body, and character alongside academic skills</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="curriculum-highlights">
+          <h3 class="curriculum-highlights__title">Program Highlights & Benefits</h3>
+          
+          <ul class="curriculum-highlights__list" role="list">
+            <li class="curriculum-highlights__item">
+              <div class="curriculum-highlights__item-icon" aria-hidden="true">🎯</div>
+              <div class="curriculum-highlights__item-content">
+                <h4 class="curriculum-highlights__item-title">Personalized Learning Paths</h4>
+                <p class="curriculum-highlights__item-description">Curriculum adapts to each child's learning style, pace, and interests with flexible scheduling and individualized support</p>
+              </div>
+            </li>
+            
+            <li class="curriculum-highlights__item">
+              <div class="curriculum-highlights__item-icon" aria-hidden="true">🌍</div>
+              <div class="curriculum-highlights__item-content">
+                <h4 class="curriculum-highlights__item-title">Real-World Learning</h4>
+                <p class="curriculum-highlights__item-description">Education extends beyond textbooks with field trips, community involvement, and practical life skills integration</p>
+              </div>
+            </li>
+            
+            <li class="curriculum-highlights__item">
+              <div class="curriculum-highlights__item-icon" aria-hidden="true">👨‍👩‍👧‍👦</div>
+              <div class="curriculum-highlights__item-content">
+                <h4 class="curriculum-highlights__item-title">Family-Centered Education</h4>
+                <p class="curriculum-highlights__item-description">Learning happens together, strengthening family bonds through shared experiences and values-based education</p>
+              </div>
+            </li>
+            
+            <li class="curriculum-highlights__item">
+              <div class="curriculum-highlights__item-icon" aria-hidden="true">🎓</div>
+              <div class="curriculum-highlights__item-content">
+                <h4 class="curriculum-highlights__item-title">College & Career Ready</h4>
+                <p class="curriculum-highlights__item-description">Comprehensive preparation with rigorous standards, transcript development, and college application support (95%+ acceptance rate)</p>
+              </div>
+            </li>
+            
+            <li class="curriculum-highlights__item">
+              <div class="curriculum-highlights__item-icon" aria-hidden="true">✅</div>
+              <div class="curriculum-highlights__item-content">
+                <h4 class="curriculum-highlights__item-title">Accredited Curriculum</h4>
+                <p class="curriculum-highlights__item-description">Nationally accredited by NAPS with transcripts accepted by colleges nationwide and NCAA approved courses available</p>
+              </div>
+            </li>
+            
+            <li class="curriculum-highlights__item">
+              <div class="curriculum-highlights__item-icon" aria-hidden="true">🤝</div>
+              <div class="curriculum-highlights__item-content">
+                <h4 class="curriculum-highlights__item-title">Expert Support Network</h4>
+                <p class="curriculum-highlights__item-description">Access to experienced educators, homeschool consultants, tutoring services, and a supportive parent community</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="curriculum-materials">
+          <h3 class="curriculum-materials__title">Comprehensive Learning Materials</h3>
+          <p class="curriculum-materials__description">Everything you need for a successful homeschool experience, from core curriculum to supplemental resources and hands-on materials</p>
+          
+          <div class="curriculum-materials__grid">
+            <div class="curriculum-materials__item">
+              <div class="curriculum-materials__item-icon" aria-hidden="true">📖</div>
+              <h4 class="curriculum-materials__item-name">Core Curriculum</h4>
+            </div>
+            
+            <div class="curriculum-materials__item">
+              <div class="curriculum-materials__item-icon" aria-hidden="true">📚</div>
+              <h4 class="curriculum-materials__item-name">Living Books Library</h4>
+            </div>
+            
+            <div class="curriculum-materials__item">
+              <div class="curriculum-materials__item-icon" aria-hidden="true">🔬</div>
+              <h4 class="curriculum-materials__item-name">Science Kits</h4>
+            </div>
+            
+            <div class="curriculum-materials__item">
+              <div class="curriculum-materials__item-icon" aria-hidden="true">🧮</div>
+              <h4 class="curriculum-materials__item-name">Math Manipulatives</h4>
+            </div>
+            
+            <div class="curriculum-materials__item">
+              <div class="curriculum-materials__item-icon" aria-hidden="true">🎨</div>
+              <h4 class="curriculum-materials__item-name">Art Supplies</h4>
+            </div>
+            
+            <div class="curriculum-materials__item">
+              <div class="curriculum-materials__item-icon" aria-hidden="true">💻</div>
+              <h4 class="curriculum-materials__item-name">Digital Resources</h4>
+            </div>
+          </div>
         </div>
       </div>
     </section>
