@@ -1,0 +1,376 @@
+/* ============================================
+   Design Tokens - CSS Custom Properties
+   ============================================ */
+
+:root {
+  /* ============================================
+     Color Palette - Educational Theme
+     ============================================ */
+  
+  /* Primary Colors - Blue (Trust, Learning, Focus) */
+  --color-primary-50: hsl(210, 100%, 97%);
+  --color-primary-100: hsl(210, 100%, 92%);
+  --color-primary-200: hsl(210, 100%, 85%);
+  --color-primary-300: hsl(210, 100%, 75%);
+  --color-primary-400: hsl(210, 100%, 65%);
+  --color-primary-500: hsl(210, 100%, 55%);
+  --color-primary-600: hsl(210, 100%, 45%);
+  --color-primary-700: hsl(210, 100%, 35%);
+  --color-primary-800: hsl(210, 100%, 25%);
+  --color-primary-900: hsl(210, 100%, 15%);
+
+  /* Secondary Colors - Teal (Growth, Creativity, Balance) */
+  --color-secondary-50: hsl(160, 85%, 97%);
+  --color-secondary-100: hsl(160, 85%, 92%);
+  --color-secondary-200: hsl(160, 85%, 85%);
+  --color-secondary-300: hsl(160, 85%, 75%);
+  --color-secondary-400: hsl(160, 85%, 65%);
+  --color-secondary-500: hsl(160, 85%, 55%);
+  --color-secondary-600: hsl(160, 85%, 45%);
+  --color-secondary-700: hsl(160, 85%, 35%);
+  --color-secondary-800: hsl(160, 85%, 25%);
+  --color-secondary-900: hsl(160, 85%, 15%);
+
+  /* Accent Colors - Warm Orange (Energy, Enthusiasm, Engagement) */
+  --color-accent-50: hsl(30, 100%, 97%);
+  --color-accent-100: hsl(30, 100%, 92%);
+  --color-accent-200: hsl(30, 100%, 85%);
+  --color-accent-300: hsl(30, 100%, 75%);
+  --color-accent-400: hsl(30, 100%, 65%);
+  --color-accent-500: hsl(30, 100%, 55%);
+  --color-accent-600: hsl(30, 100%, 45%);
+  --color-accent-700: hsl(30, 100%, 35%);
+  --color-accent-800: hsl(30, 100%, 25%);
+  --color-accent-900: hsl(30, 100%, 15%);
+
+  /* Neutral Colors - Gray Scale */
+  --color-neutral-50: hsl(0, 0%, 98%);
+  --color-neutral-100: hsl(0, 0%, 95%);
+  --color-neutral-200: hsl(0, 0%, 90%);
+  --color-neutral-300: hsl(0, 0%, 80%);
+  --color-neutral-400: hsl(0, 0%, 65%);
+  --color-neutral-500: hsl(0, 0%, 50%);
+  --color-neutral-600: hsl(0, 0%, 40%);
+  --color-neutral-700: hsl(0, 0%, 30%);
+  --color-neutral-800: hsl(0, 0%, 20%);
+  --color-neutral-900: hsl(0, 0%, 10%);
+
+  /* Semantic Colors - Educational Context */
+  --color-success: hsl(142, 71%, 45%);
+  --color-success-light: hsl(142, 71%, 95%);
+  --color-success-dark: hsl(142, 71%, 25%);
+  
+  --color-warning: hsl(38, 92%, 50%);
+  --color-warning-light: hsl(38, 92%, 95%);
+  --color-warning-dark: hsl(38, 92%, 30%);
+  
+  --color-error: hsl(0, 84%, 60%);
+  --color-error-light: hsl(0, 84%, 95%);
+  --color-error-dark: hsl(0, 84%, 40%);
+  
+  --color-info: hsl(199, 89%, 48%);
+  --color-info-light: hsl(199, 89%, 95%);
+  --color-info-dark: hsl(199, 89%, 28%);
+
+  /* Educational Semantic Colors */
+  --color-learning: var(--color-primary-500);
+  --color-achievement: var(--color-accent-500);
+  --color-progress: var(--color-secondary-500);
+  --color-focus: var(--color-primary-600);
+  --color-creativity: var(--color-accent-400);
+
+  /* Surface Colors */
+  --color-background: var(--color-neutral-50);
+  --color-surface: hsl(0, 0%, 100%);
+  --color-surface-elevated: hsl(0, 0%, 100%);
+  --color-surface-overlay: hsla(0, 0%, 0%, 0.5);
+  
+  /* Text Colors */
+  --color-text-primary: var(--color-neutral-900);
+  --color-text-secondary: var(--color-neutral-700);
+  --color-text-tertiary: var(--color-neutral-500);
+  --color-text-disabled: var(--color-neutral-400);
+  --color-text-inverse: hsl(0, 0%, 100%);
+  
+  /* Border Colors */
+  --color-border: var(--color-neutral-200);
+  --color-border-hover: var(--color-neutral-300);
+  --color-border-focus: var(--color-primary-500);
+  --color-border-error: var(--color-error);
+
+  /* ============================================
+     Typography Scale - Fluid Responsive
+     ============================================ */
+  
+  /* Font Families */
+  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-family-heading: var(--font-family-base);
+  --font-family-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+
+  /* Font Sizes - Fluid Typography with clamp() */
+  --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --font-size-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+  --font-size-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --font-size-lg: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
+  --font-size-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+  --font-size-2xl: clamp(1.5rem, 1.3rem + 1vw, 1.875rem);
+  --font-size-3xl: clamp(1.875rem, 1.6rem + 1.375vw, 2.25rem);
+  --font-size-4xl: clamp(2.25rem, 1.9rem + 1.75vw, 3rem);
+  --font-size-5xl: clamp(3rem, 2.5rem + 2.5vw, 3.75rem);
+  --font-size-6xl: clamp(3.75rem, 3rem + 3.75vw, 4.5rem);
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Line Heights */
+  --line-height-none: 1;
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+
+  /* Letter Spacing */
+  --letter-spacing-tighter: -0.05em;
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
+
+  /* ============================================
+     Spacing Scale - Fluid Responsive
+     ============================================ */
+  
+  --space-0: 0;
+  --space-px: 1px;
+  --space-0-5: clamp(0.125rem, 0.1rem + 0.125vw, 0.1875rem);
+  --space-1: clamp(0.25rem, 0.2rem + 0.25vw, 0.375rem);
+  --space-1-5: clamp(0.375rem, 0.3rem + 0.375vw, 0.5625rem);
+  --space-2: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem);
+  --space-2-5: clamp(0.625rem, 0.5rem + 0.625vw, 0.9375rem);
+  --space-3: clamp(0.75rem, 0.6rem + 0.75vw, 1.125rem);
+  --space-3-5: clamp(0.875rem, 0.7rem + 0.875vw, 1.3125rem);
+  --space-4: clamp(1rem, 0.8rem + 1vw, 1.5rem);
+  --space-5: clamp(1.25rem, 1rem + 1.25vw, 1.875rem);
+  --space-6: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
+  --space-7: clamp(1.75rem, 1.4rem + 1.75vw, 2.625rem);
+  --space-8: clamp(2rem, 1.6rem + 2vw, 3rem);
+  --space-9: clamp(2.25rem, 1.8rem + 2.25vw, 3.375rem);
+  --space-10: clamp(2.5rem, 2rem + 2.5vw, 3.75rem);
+  --space-11: clamp(2.75rem, 2.2rem + 2.75vw, 4.125rem);
+  --space-12: clamp(3rem, 2.4rem + 3vw, 4.5rem);
+  --space-14: clamp(3.5rem, 2.8rem + 3.5vw, 5.25rem);
+  --space-16: clamp(4rem, 3.2rem + 4vw, 6rem);
+  --space-20: clamp(5rem, 4rem + 5vw, 7.5rem);
+  --space-24: clamp(6rem, 4.8rem + 6vw, 9rem);
+  --space-28: clamp(7rem, 5.6rem + 7vw, 10.5rem);
+  --space-32: clamp(8rem, 6.4rem + 8vw, 12rem);
+
+  /* ============================================
+     Border Radius
+     ============================================ */
+  
+  --radius-none: 0;
+  --radius-sm: 0.25rem;
+  --radius-base: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+  --radius-full: 9999px;
+
+  /* ============================================
+     Shadows - Elevation System
+     ============================================ */
+  
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-base: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  --shadow-none: 0 0 #0000;
+
+  /* Colored Shadows for Educational Elements */
+  --shadow-primary: 0 10px 15px -3px rgba(59, 130, 246, 0.3), 0 4px 6px -4px rgba(59, 130, 246, 0.3);
+  --shadow-secondary: 0 10px 15px -3px rgba(16, 185, 129, 0.3), 0 4px 6px -4px rgba(16, 185, 129, 0.3);
+  --shadow-accent: 0 10px 15px -3px rgba(251, 146, 60, 0.3), 0 4px 6px -4px rgba(251, 146, 60, 0.3);
+
+  /* ============================================
+     Transitions & Animations
+     ============================================ */
+  
+  /* Timing Functions */
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  /* Duration */
+  --duration-instant: 75ms;
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 350ms;
+  --duration-slower: 500ms;
+  --duration-slowest: 750ms;
+
+  /* Combined Transitions */
+  --transition-fast: var(--duration-fast) var(--ease-out);
+  --transition-base: var(--duration-base) var(--ease-in-out);
+  --transition-slow: var(--duration-slow) var(--ease-in-out);
+  --transition-all: all var(--duration-base) var(--ease-in-out);
+
+  /* ============================================
+     Z-Index Scale
+     ============================================ */
+  
+  --z-base: 0;
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-notification: 1080;
+  --z-max: 9999;
+
+  /* ============================================
+     Breakpoints - Mobile-First
+     ============================================ */
+  
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* ============================================
+     Container Widths
+     ============================================ */
+  
+  --container-xs: 320px;
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+
+  /* ============================================
+     Grid & Layout
+     ============================================ */
+  
+  --grid-columns: 12;
+  --grid-gap: var(--space-4);
+  --grid-gap-sm: var(--space-2);
+  --grid-gap-lg: var(--space-6);
+
+  /* ============================================
+     Interactive Elements - Touch-Friendly
+     ============================================ */
+  
+  --touch-target-min: 44px;
+  --button-height-sm: 36px;
+  --button-height-base: 44px;
+  --button-height-lg: 52px;
+  --input-height-sm: 36px;
+  --input-height-base: 44px;
+  --input-height-lg: 52px;
+
+  /* ============================================
+     Opacity Scale
+     ============================================ */
+  
+  --opacity-0: 0;
+  --opacity-5: 0.05;
+  --opacity-10: 0.1;
+  --opacity-20: 0.2;
+  --opacity-25: 0.25;
+  --opacity-30: 0.3;
+  --opacity-40: 0.4;
+  --opacity-50: 0.5;
+  --opacity-60: 0.6;
+  --opacity-70: 0.7;
+  --opacity-75: 0.75;
+  --opacity-80: 0.8;
+  --opacity-90: 0.9;
+  --opacity-95: 0.95;
+  --opacity-100: 1;
+
+  /* ============================================
+     Border Widths
+     ============================================ */
+  
+  --border-width-0: 0;
+  --border-width-1: 1px;
+  --border-width-2: 2px;
+  --border-width-4: 4px;
+  --border-width-8: 8px;
+}
+
+/* ============================================
+   Dark Mode Support
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Inverted Surface Colors */
+    --color-background: var(--color-neutral-900);
+    --color-surface: var(--color-neutral-800);
+    --color-surface-elevated: var(--color-neutral-700);
+    
+    /* Adjusted Text Colors */
+    --color-text-primary: var(--color-neutral-50);
+    --color-text-secondary: var(--color-neutral-300);
+    --color-text-tertiary: var(--color-neutral-500);
+    --color-text-disabled: var(--color-neutral-600);
+    --color-text-inverse: var(--color-neutral-900);
+    
+    /* Adjusted Border Colors */
+    --color-border: var(--color-neutral-700);
+    --color-border-hover: var(--color-neutral-600);
+    
+    /* Lighter Primary Colors for Dark Mode */
+    --color-primary-500: hsl(210, 100%, 65%);
+    --color-primary-600: hsl(210, 100%, 55%);
+    
+    /* Adjusted Shadows for Dark Mode */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px -1px rgba(0, 0, 0, 0.4);
+    --shadow-base: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+    --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* ============================================
+   High Contrast Mode Support
+   ============================================ */
+
+@media (prefers-contrast: high) {
+  :root {
+    /* Enhanced Contrast Colors */
+    --color-primary-500: hsl(210, 100%, 40%);
+    --color-primary-600: hsl(210, 100%, 30%);
+    --color-border: var(--color-neutral-900);
+    --color-text-secondary: var(--color-neutral-900);
+    
+    /* Stronger Shadows */
+    --shadow-base: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+  }
+}
