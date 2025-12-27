@@ -451,6 +451,41 @@ const Validation = {
 };
 
 /**
+ * Initialize hero section functionality with error handling
+ */
+function initHeroSection() {
+  try {
+    const heroSection = DOM.query('.hero-section');
+    
+    if (!heroSection) {
+      console.warn('[Main] Hero section not found in DOM');
+      return;
+    }
+
+    const heroImages = DOM.queryAll('img[data-src], img[data-srcset]', heroSection);
+    
+    if (heroImages.length > 0) {
+      heroImages.forEach((image) => {
+        const handleImageLoad = () => {
+          console.log('[Main] Hero image loaded successfully');
+        };
+
+        const handleImageError = (error) => {
+          console.error('[Main] Hero image failed to load', error);
+        };
+
+        Events.on(image, 'load', handleImageLoad, { once: true });
+        Events.on(image, 'error', handleImageError, { once: true });
+      });
+    }
+
+    console.log('[Main] Hero section functionality initialized');
+  } catch (error) {
+    console.error('[Main] Hero section initialization failed', error);
+  }
+}
+
+/**
  * Smooth scroll navigation handler
  */
 function initSmoothScroll() {
@@ -558,6 +593,7 @@ function init() {
     initSmoothScroll();
     initHeaderBehavior();
     initFormHandling();
+    initHeroSection();
 
     console.log('HomeschoolHub application initialized successfully');
   } catch (error) {

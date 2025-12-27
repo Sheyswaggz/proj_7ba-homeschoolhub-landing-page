@@ -1,0 +1,381 @@
+/* ============================================
+   Hero Section Styles
+   ============================================ */
+
+/* Hero Container - Full viewport with background */
+.hero {
+  /* Layout */
+  position: relative;
+  display: grid;
+  grid-template-columns: 
+    [full-start] minmax(var(--space-4), 1fr)
+    [content-start] min(1200px, 100% - var(--space-4) * 2)
+    [content-end] minmax(var(--space-4), 1fr)
+    [full-end];
+  grid-template-rows: auto 1fr auto;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  
+  /* Visual */
+  background-color: var(--color-neutral-900);
+  overflow: hidden;
+  isolation: isolate;
+  
+  /* Performance */
+  contain: layout style paint;
+}
+
+/* Background Image Layer */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+  
+  /* Performance optimization */
+  will-change: transform;
+}
+
+/* Overlay for text readability */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: -1;
+}
+
+/* Hero Content Container */
+.hero__content {
+  grid-column: content;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding-block: var(--space-8);
+  max-width: 800px;
+  z-index: 1;
+}
+
+/* Hero Headline */
+.hero__headline {
+  margin: 0;
+  font-family: var(--font-family-heading);
+  font-size: clamp(2rem, 5vw + 1rem, 4rem);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-inverse);
+  text-wrap: balance;
+  letter-spacing: -0.02em;
+}
+
+/* Hero Subheadline */
+.hero__subheadline {
+  margin: 0;
+  font-family: var(--font-family-base);
+  font-size: clamp(1.125rem, 2vw + 0.5rem, 1.5rem);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-neutral-100);
+  text-wrap: pretty;
+  max-width: 65ch;
+}
+
+/* Hero CTA Container */
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+  margin-block-start: var(--space-2);
+}
+
+/* Hero CTA Buttons - Primary */
+.hero__cta-primary {
+  /* Inherit from .button base styles */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--button-height-lg);
+  padding-inline: var(--space-6);
+  padding-block: var(--space-3);
+  
+  /* Typography */
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  
+  /* Visual */
+  border: var(--border-width-2) solid transparent;
+  border-radius: var(--radius-md);
+  background-color: var(--color-accent-600);
+  color: var(--color-text-inverse);
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.3),
+    0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  user-select: none;
+  
+  /* Transitions */
+  transition: 
+    background-color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+  
+  /* Performance */
+  will-change: transform;
+}
+
+.hero__cta-primary:hover {
+  background-color: var(--color-accent-700);
+  box-shadow: 
+    0 10px 15px -3px rgba(0, 0, 0, 0.4),
+    0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.hero__cta-primary:active {
+  background-color: var(--color-accent-800);
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.3),
+    0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
+}
+
+.hero__cta-primary:focus-visible {
+  outline: 2px solid var(--color-accent-300);
+  outline-offset: 2px;
+}
+
+/* Hero CTA Buttons - Secondary */
+.hero__cta-secondary {
+  /* Inherit from .button base styles */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--button-height-lg);
+  padding-inline: var(--space-6);
+  padding-block: var(--space-3);
+  
+  /* Typography */
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  
+  /* Visual - Outline style */
+  border: var(--border-width-2) solid var(--color-text-inverse);
+  border-radius: var(--radius-md);
+  background-color: transparent;
+  color: var(--color-text-inverse);
+  box-shadow: none;
+  cursor: pointer;
+  user-select: none;
+  backdrop-filter: blur(4px);
+  
+  /* Transitions */
+  transition: 
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+  
+  /* Performance */
+  will-change: transform;
+}
+
+.hero__cta-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-accent-300);
+  transform: translateY(-2px);
+}
+
+.hero__cta-secondary:active {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(0);
+}
+
+.hero__cta-secondary:focus-visible {
+  outline: 2px solid var(--color-accent-300);
+  outline-offset: 2px;
+}
+
+/* Trust Indicators Container */
+.hero__trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  align-items: center;
+  margin-block-start: var(--space-4);
+  padding-block-start: var(--space-6);
+  border-block-start: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Individual Trust Indicator */
+.hero__trust-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.hero__trust-value {
+  font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent-400);
+  line-height: var(--line-height-tight);
+}
+
+.hero__trust-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-neutral-200);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ============================================
+   Responsive Adjustments
+   ============================================ */
+
+/* Small devices (landscape phones, 640px and up) */
+@media (width >= 640px) {
+  .hero__content {
+    gap: var(--space-8);
+  }
+  
+  .hero__cta {
+    gap: var(--space-6);
+  }
+  
+  .hero__trust {
+    gap: var(--space-8);
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (width >= 768px) {
+  .hero {
+    grid-template-columns: 
+      [full-start] minmax(var(--space-6), 1fr)
+      [content-start] min(1200px, 100% - var(--space-6) * 2)
+      [content-end] minmax(var(--space-6), 1fr)
+      [full-end];
+  }
+  
+  .hero__content {
+    padding-block: var(--space-12);
+  }
+  
+  .hero__headline {
+    letter-spacing: -0.03em;
+  }
+}
+
+/* Large devices (desktops, 1024px and up) */
+@media (width >= 1024px) {
+  .hero {
+    grid-template-columns: 
+      [full-start] minmax(var(--space-8), 1fr)
+      [content-start] min(1200px, 100% - var(--space-8) * 2)
+      [content-end] minmax(var(--space-8), 1fr)
+      [full-end];
+  }
+  
+  .hero__content {
+    gap: var(--space-10);
+  }
+  
+  .hero__cta {
+    flex-wrap: nowrap;
+  }
+}
+
+/* ============================================
+   Accessibility Enhancements
+   ============================================ */
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .hero::before {
+    will-change: auto;
+  }
+  
+  .hero__cta-primary,
+  .hero__cta-secondary {
+    transition-duration: 0.01ms;
+    will-change: auto;
+  }
+  
+  .hero__cta-primary:hover,
+  .hero__cta-secondary:hover {
+    transform: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .hero::after {
+    background: rgba(0, 0, 0, 0.85);
+  }
+  
+  .hero__cta-primary,
+  .hero__cta-secondary {
+    border-width: 3px;
+  }
+  
+  .hero__trust {
+    border-block-start-width: 2px;
+  }
+}
+
+/* Focus visible for keyboard navigation */
+.hero__cta-primary:focus-visible,
+.hero__cta-secondary:focus-visible {
+  outline-width: 3px;
+  outline-style: solid;
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+  .hero {
+    min-height: auto;
+    page-break-after: always;
+  }
+  
+  .hero::before,
+  .hero::after {
+    display: none;
+  }
+  
+  .hero__headline,
+  .hero__subheadline,
+  .hero__trust-value,
+  .hero__trust-label {
+    color: black;
+  }
+  
+  .hero__cta {
+    display: none;
+  }
+}
