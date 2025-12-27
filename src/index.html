@@ -390,49 +390,326 @@
       </div>
     </section>
     
-    <section id="testimonials" aria-labelledby="testimonials-title">
+    <section id="testimonials" class="testimonials-section" aria-labelledby="testimonials-title" data-feature-flag="on">
       <div class="section-container">
-        <header>
-          <h2 id="testimonials-title">What Families Say</h2>
-          <p class="section-description">Real experiences from homeschool families using our curriculum</p>
+        <header class="testimonials__header">
+          <h2 id="testimonials-title" class="testimonials__title">What Families Say</h2>
+          <p class="testimonials__subtitle">Real experiences from homeschool families using our curriculum</p>
         </header>
         
-        <div class="testimonials-grid">
-          <article class="testimonial-card">
-            <blockquote>
-              <p>"HomeschoolHub transformed our homeschool experience. The curriculum is engaging and my children actually look forward to learning every day."</p>
-              <footer>
-                <cite>
-                  <strong>Sarah Johnson</strong>
-                  <span>Mother of 3, Homeschooling for 5 years</span>
-                </cite>
-              </footer>
-            </blockquote>
-          </article>
+        <div class="testimonials__carousel" data-testimonials-carousel role="region" aria-roledescription="carousel" aria-label="Family testimonials">
+          <div class="testimonials__track-container">
+            <div class="testimonials__track" data-carousel-track role="list">
+              <article class="testimonial-card" data-carousel-slide role="listitem" aria-roledescription="slide" aria-label="Testimonial 1 of 8">
+                <div class="testimonial-card__content">
+                  <blockquote class="testimonial-card__quote">
+                    HomeschoolHub transformed our homeschooling journey. The curriculum is engaging, and our kids actually look forward to learning every day. We've seen tremendous growth in both their academic skills and confidence.
+                  </blockquote>
+                  
+                  <div class="testimonial-card__family">
+                    <div class="testimonial-card__image-wrapper">
+                      <img 
+                        src="/src/images/testimonials/family-1.jpg" 
+                        alt="The Anderson family smiling together outdoors"
+                        class="testimonial-card__image"
+                        loading="lazy"
+                        decoding="async"
+                        width="80"
+                        height="80"
+                      >
+                    </div>
+                    
+                    <div class="testimonial-card__info">
+                      <cite class="testimonial-card__name">Sarah & Michael Anderson</cite>
+                      <span class="testimonial-card__grade">3rd & 5th Grade • Austin, TX</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              
+              <article class="testimonial-card" data-carousel-slide role="listitem" aria-roledescription="slide" aria-label="Testimonial 2 of 8">
+                <div class="testimonial-card__content">
+                  <blockquote class="testimonial-card__quote">
+                    As a single parent, I was worried about managing homeschool, but HomeschoolHub made it so simple. The structured lessons and support community have been invaluable. My children are thriving!
+                  </blockquote>
+                  
+                  <div class="testimonial-card__family">
+                    <div class="testimonial-card__image-wrapper">
+                      <img 
+                        src="/src/images/testimonials/family-2.jpg" 
+                        alt="Elena Martinez with her two children reading together"
+                        class="testimonial-card__image"
+                        loading="lazy"
+                        decoding="async"
+                        width="80"
+                        height="80"
+                      >
+                    </div>
+                    
+                    <div class="testimonial-card__info">
+                      <cite class="testimonial-card__name">Elena Martinez</cite>
+                      <span class="testimonial-card__grade">1st & 7th Grade • Phoenix, AZ</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              
+              <article class="testimonial-card" data-carousel-slide role="listitem" aria-roledescription="slide" aria-label="Testimonial 3 of 8">
+                <div class="testimonial-card__content">
+                  <blockquote class="testimonial-card__quote">
+                    With three kids at different levels, we needed flexibility without sacrificing quality. HomeschoolHub delivers both. The personalized learning paths have helped each child excel at their own pace.
+                  </blockquote>
+                  
+                  <div class="testimonial-card__family">
+                    <div class="testimonial-card__image-wrapper">
+                      <img 
+                        src="/src/images/testimonials/family-3.jpg" 
+                        alt="The Chen family working together at their homeschool table"
+                        class="testimonial-card__image"
+                        loading="lazy"
+                        decoding="async"
+                        width="80"
+                        height="80"
+                      >
+                    </div>
+                    
+                    <div class="testimonial-card__info">
+                      <cite class="testimonial-card__name">David & Lisa Chen</cite>
+                      <span class="testimonial-card__grade">4th, 6th & 9th Grade • Seattle, WA</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              
+              <article class="testimonial-card" data-carousel-slide role="listitem" aria-roledescription="slide" aria-label="Testimonial 4 of 8">
+                <div class="testimonial-card__content">
+                  <blockquote class="testimonial-card__quote">
+                    We switched to HomeschoolHub after struggling with other programs. The difference was immediate. The interactive lessons keep our kids engaged, and the progress tracking helps us stay on top of their development.
+                  </blockquote>
+                  
+                  <div class="testimonial-card__family">
+                    <div class="testimonial-card__image-wrapper">
+                      <img 
+                        src="/src/images/testimonials/family-1.jpg" 
+                        alt="The Thompson family celebrating a learning milestone"
+                        class="testimonial-card__image"
+                        loading="lazy"
+                        decoding="async"
+                        width="80"
+                        height="80"
+                      >
+                    </div>
+                    
+                    <div class="testimonial-card__info">
+                      <cite class="testimonial-card__name">Jennifer & Robert Thompson</cite>
+                      <span class="testimonial-card__grade">2nd & 4th Grade • Denver, CO</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              
+              <article class="testimonial-card" data-carousel-slide role="listitem" aria-roledescription="slide" aria-label="Testimonial 5 of 8">
+                <div class="testimonial-card__content">
+                  <blockquote class="testimonial-card__quote">
+                    Starting homeschool was intimidating, but HomeschoolHub made the transition seamless. The comprehensive curriculum and responsive support team gave us the confidence we needed. Best decision we've made!
+                  </blockquote>
+                  
+                  <div class="testimonial-card__family">
+                    <div class="testimonial-card__image-wrapper">
+                      <img 
+                        src="/src/images/testimonials/family-2.jpg" 
+                        alt="The Williams family during a science experiment"
+                        class="testimonial-card__image"
+                        loading="lazy"
+                        decoding="async"
+                        width="80"
+                        height="80"
+                      >
+                    </div>
+                    
+                    <div class="testimonial-card__info">
+                      <cite class="testimonial-card__name">Marcus & Aisha Williams</cite>
+                      <span class="testimonial-card__grade">Kindergarten & 3rd Grade • Atlanta, GA</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              
+              <article class="testimonial-card" data-carousel-slide role="listitem" aria-roledescription="slide" aria-label="Testimonial 6 of 8">
+                <div class="testimonial-card__content">
+                  <blockquote class="testimonial-card__quote">
+                    HomeschoolHub has been our partner for five years. The curriculum grows with our children, and the quality never wavers. Our kids are prepared academically and socially for whatever comes next.
+                  </blockquote>
+                  
+                  <div class="testimonial-card__family">
+                    <div class="testimonial-card__image-wrapper">
+                      <img 
+                        src="/src/images/testimonials/family-3.jpg" 
+                        alt="Carmen Rodriguez with her children at graduation"
+                        class="testimonial-card__image"
+                        loading="lazy"
+                        decoding="async"
+                        width="80"
+                        height="80"
+                      >
+                    </div>
+                    
+                    <div class="testimonial-card__info">
+                      <cite class="testimonial-card__name">Carmen Rodriguez</cite>
+                      <span class="testimonial-card__grade">5th & 8th Grade • Miami, FL</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              
+              <article class="testimonial-card" data-carousel-slide role="listitem" aria-roledescription="slide" aria-label="Testimonial 7 of 8">
+                <div class="testimonial-card__content">
+                  <blockquote class="testimonial-card__quote">
+                    Managing three different grade levels seemed impossible until we found HomeschoolHub. The organized curriculum and time-saving resources have given us more quality family time while ensuring excellent education.
+                  </blockquote>
+                  
+                  <div class="testimonial-card__family">
+                    <div class="testimonial-card__image-wrapper">
+                      <img 
+                        src="/src/images/testimonials/family-1.jpg" 
+                        alt="The Johnson family on a nature field trip"
+                        class="testimonial-card__image"
+                        loading="lazy"
+                        decoding="async"
+                        width="80"
+                        height="80"
+                      >
+                    </div>
+                    
+                    <div class="testimonial-card__info">
+                      <cite class="testimonial-card__name">Emily & James Johnson</cite>
+                      <span class="testimonial-card__grade">1st, 3rd & 6th Grade • Portland, OR</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              
+              <article class="testimonial-card" data-carousel-slide role="listitem" aria-roledescription="slide" aria-label="Testimonial 8 of 8">
+                <div class="testimonial-card__content">
+                  <blockquote class="testimonial-card__quote">
+                    The blend of traditional academics and modern learning tools in HomeschoolHub is perfect. Our children are excelling in STEM subjects while developing critical thinking skills. We couldn't be happier with their progress.
+                  </blockquote>
+                  
+                  <div class="testimonial-card__family">
+                    <div class="testimonial-card__image-wrapper">
+                      <img 
+                        src="/src/images/testimonials/family-2.jpg" 
+                        alt="The Patel family working on a robotics project"
+                        class="testimonial-card__image"
+                        loading="lazy"
+                        decoding="async"
+                        width="80"
+                        height="80"
+                      >
+                    </div>
+                    
+                    <div class="testimonial-card__info">
+                      <cite class="testimonial-card__name">Priya & Raj Patel</cite>
+                      <span class="testimonial-card__grade">4th & 7th Grade • San Jose, CA</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
           
-          <article class="testimonial-card">
-            <blockquote>
-              <p>"The flexibility and support we receive is incredible. Our kids are thriving academically and socially with this program."</p>
-              <footer>
-                <cite>
-                  <strong>Michael Chen</strong>
-                  <span>Father of 2, New to homeschooling</span>
-                </cite>
-              </footer>
-            </blockquote>
-          </article>
+          <div class="testimonials__controls">
+            <button 
+              type="button"
+              class="testimonials__nav-button"
+              data-carousel-prev
+              aria-label="Previous testimonial"
+            >
+              <svg aria-hidden="true" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M10 3L5 8l5 5V3z"/>
+              </svg>
+            </button>
+            
+            <div class="testimonials__dots" role="tablist" aria-label="Testimonial navigation">
+              <button 
+                type="button"
+                class="testimonials__dot testimonials__dot--active"
+                data-carousel-indicator
+                role="tab"
+                aria-label="Go to testimonial 1"
+                aria-selected="true"
+              ></button>
+              <button 
+                type="button"
+                class="testimonials__dot"
+                data-carousel-indicator
+                role="tab"
+                aria-label="Go to testimonial 2"
+                aria-selected="false"
+              ></button>
+              <button 
+                type="button"
+                class="testimonials__dot"
+                data-carousel-indicator
+                role="tab"
+                aria-label="Go to testimonial 3"
+                aria-selected="false"
+              ></button>
+              <button 
+                type="button"
+                class="testimonials__dot"
+                data-carousel-indicator
+                role="tab"
+                aria-label="Go to testimonial 4"
+                aria-selected="false"
+              ></button>
+              <button 
+                type="button"
+                class="testimonials__dot"
+                data-carousel-indicator
+                role="tab"
+                aria-label="Go to testimonial 5"
+                aria-selected="false"
+              ></button>
+              <button 
+                type="button"
+                class="testimonials__dot"
+                data-carousel-indicator
+                role="tab"
+                aria-label="Go to testimonial 6"
+                aria-selected="false"
+              ></button>
+              <button 
+                type="button"
+                class="testimonials__dot"
+                data-carousel-indicator
+                role="tab"
+                aria-label="Go to testimonial 7"
+                aria-selected="false"
+              ></button>
+              <button 
+                type="button"
+                class="testimonials__dot"
+                data-carousel-indicator
+                role="tab"
+                aria-label="Go to testimonial 8"
+                aria-selected="false"
+              ></button>
+            </div>
+            
+            <button 
+              type="button"
+              class="testimonials__nav-button"
+              data-carousel-next
+              aria-label="Next testimonial"
+            >
+              <svg aria-hidden="true" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M6 3l5 5-5 5V3z"/>
+              </svg>
+            </button>
+          </div>
           
-          <article class="testimonial-card">
-            <blockquote>
-              <p>"Best decision we made for our family. The resources are comprehensive and the community support is invaluable."</p>
-              <footer>
-                <cite>
-                  <strong>Emily Rodriguez</strong>
-                  <span>Mother of 4, Homeschooling for 8 years</span>
-                </cite>
-              </footer>
-            </blockquote>
-          </article>
+          <div role="status" aria-live="polite" aria-atomic="true" class="sr-only"></div>
         </div>
       </div>
     </section>
