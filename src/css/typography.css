@@ -1,0 +1,546 @@
+/* ============================================
+   Typography System - Responsive & Accessible
+   ============================================ */
+
+/* ============================================
+   Base Typography Styles
+   ============================================ */
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ============================================
+   Heading Styles - Semantic Hierarchy
+   ============================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-text-primary);
+  margin-block-start: 0;
+  margin-block-end: var(--space-4);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-none);
+  letter-spacing: var(--letter-spacing-tighter);
+  margin-block-end: var(--space-6);
+}
+
+h2 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  margin-block-end: var(--space-5);
+}
+
+h3 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  margin-block-end: var(--space-4);
+}
+
+h4 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  margin-block-end: var(--space-3);
+}
+
+h5 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  margin-block-end: var(--space-3);
+}
+
+h6 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+  margin-block-end: var(--space-2);
+}
+
+/* ============================================
+   Body Text Styles
+   ============================================ */
+
+p {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  margin-block-start: 0;
+  margin-block-end: var(--space-4);
+  max-width: 65ch;
+}
+
+p:last-child {
+  margin-block-end: 0;
+}
+
+/* Lead paragraph - larger introductory text */
+.text-lead {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  margin-block-end: var(--space-6);
+}
+
+/* Small text */
+.text-small,
+small {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+/* Extra small text */
+.text-xs {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-normal);
+}
+
+/* ============================================
+   Text Emphasis & Semantic Styles
+   ============================================ */
+
+strong,
+b {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+mark {
+  background-color: var(--color-accent-100);
+  color: var(--color-text-primary);
+  padding-inline: var(--space-0-5);
+  border-radius: var(--radius-sm);
+}
+
+del {
+  text-decoration: line-through;
+  color: var(--color-text-tertiary);
+}
+
+ins {
+  text-decoration: underline;
+  color: var(--color-success);
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+  border-bottom: none;
+}
+
+/* ============================================
+   Link Styles
+   ============================================ */
+
+a {
+  color: var(--color-primary-600);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary-700);
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+a:active {
+  color: var(--color-primary-800);
+}
+
+/* ============================================
+   Code & Preformatted Text
+   ============================================ */
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--font-family-mono);
+  font-size: 0.9em;
+}
+
+code {
+  background-color: var(--color-neutral-100);
+  color: var(--color-primary-700);
+  padding-inline: var(--space-1);
+  padding-block: var(--space-0-5);
+  border-radius: var(--radius-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+kbd {
+  background-color: var(--color-neutral-800);
+  color: var(--color-neutral-50);
+  padding-inline: var(--space-1-5);
+  padding-block: var(--space-0-5);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-neutral-700);
+  box-shadow: 0 2px 0 var(--color-neutral-700);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+pre {
+  background-color: var(--color-neutral-900);
+  color: var(--color-neutral-50);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  line-height: var(--line-height-relaxed);
+  margin-block-end: var(--space-4);
+}
+
+pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+  font-weight: var(--font-weight-normal);
+}
+
+/* ============================================
+   Blockquotes
+   ============================================ */
+
+blockquote {
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  margin-block: var(--space-6);
+  padding-inline-start: var(--space-6);
+  padding-block: var(--space-4);
+  border-inline-start: 4px solid var(--color-primary-500);
+  background-color: var(--color-primary-50);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+blockquote p:last-child {
+  margin-block-end: 0;
+}
+
+blockquote cite {
+  display: block;
+  margin-block-start: var(--space-3);
+  font-size: var(--font-size-sm);
+  font-style: normal;
+  color: var(--color-text-tertiary);
+}
+
+blockquote cite::before {
+  content: '— ';
+}
+
+/* ============================================
+   Lists
+   ============================================ */
+
+ul,
+ol {
+  margin-block-start: 0;
+  margin-block-end: var(--space-4);
+  padding-inline-start: var(--space-6);
+  line-height: var(--line-height-relaxed);
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-block-end: 0;
+  margin-block-start: var(--space-2);
+}
+
+li {
+  margin-block-end: var(--space-2);
+}
+
+li:last-child {
+  margin-block-end: 0;
+}
+
+/* Custom list styles */
+ul.list-none {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+ul.list-check {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+ul.list-check li {
+  position: relative;
+  padding-inline-start: var(--space-6);
+}
+
+ul.list-check li::before {
+  content: '✓';
+  position: absolute;
+  inset-inline-start: 0;
+  color: var(--color-success);
+  font-weight: var(--font-weight-bold);
+}
+
+/* ============================================
+   Definition Lists
+   ============================================ */
+
+dl {
+  margin-block-start: 0;
+  margin-block-end: var(--space-4);
+}
+
+dt {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-block-end: var(--space-1);
+}
+
+dd {
+  margin-inline-start: var(--space-6);
+  margin-block-end: var(--space-3);
+  color: var(--color-text-secondary);
+}
+
+dd:last-child {
+  margin-block-end: 0;
+}
+
+/* ============================================
+   Utility Classes - Font Sizes
+   ============================================ */
+
+.text-xs { font-size: var(--font-size-xs); }
+.text-sm { font-size: var(--font-size-sm); }
+.text-base { font-size: var(--font-size-base); }
+.text-lg { font-size: var(--font-size-lg); }
+.text-xl { font-size: var(--font-size-xl); }
+.text-2xl { font-size: var(--font-size-2xl); }
+.text-3xl { font-size: var(--font-size-3xl); }
+.text-4xl { font-size: var(--font-size-4xl); }
+.text-5xl { font-size: var(--font-size-5xl); }
+.text-6xl { font-size: var(--font-size-6xl); }
+
+/* ============================================
+   Utility Classes - Font Weights
+   ============================================ */
+
+.font-light { font-weight: var(--font-weight-light); }
+.font-normal { font-weight: var(--font-weight-normal); }
+.font-medium { font-weight: var(--font-weight-medium); }
+.font-semibold { font-weight: var(--font-weight-semibold); }
+.font-bold { font-weight: var(--font-weight-bold); }
+.font-extrabold { font-weight: var(--font-weight-extrabold); }
+
+/* ============================================
+   Utility Classes - Line Heights
+   ============================================ */
+
+.leading-none { line-height: var(--line-height-none); }
+.leading-tight { line-height: var(--line-height-tight); }
+.leading-snug { line-height: var(--line-height-snug); }
+.leading-normal { line-height: var(--line-height-normal); }
+.leading-relaxed { line-height: var(--line-height-relaxed); }
+.leading-loose { line-height: var(--line-height-loose); }
+
+/* ============================================
+   Utility Classes - Letter Spacing
+   ============================================ */
+
+.tracking-tighter { letter-spacing: var(--letter-spacing-tighter); }
+.tracking-tight { letter-spacing: var(--letter-spacing-tight); }
+.tracking-normal { letter-spacing: var(--letter-spacing-normal); }
+.tracking-wide { letter-spacing: var(--letter-spacing-wide); }
+.tracking-wider { letter-spacing: var(--letter-spacing-wider); }
+.tracking-widest { letter-spacing: var(--letter-spacing-widest); }
+
+/* ============================================
+   Utility Classes - Text Colors
+   ============================================ */
+
+.text-primary { color: var(--color-text-primary); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-tertiary { color: var(--color-text-tertiary); }
+.text-disabled { color: var(--color-text-disabled); }
+.text-inverse { color: var(--color-text-inverse); }
+.text-success { color: var(--color-success); }
+.text-warning { color: var(--color-warning); }
+.text-error { color: var(--color-error); }
+.text-info { color: var(--color-info); }
+
+/* ============================================
+   Utility Classes - Text Alignment
+   ============================================ */
+
+.text-left { text-align: start; }
+.text-center { text-align: center; }
+.text-right { text-align: end; }
+.text-justify { text-align: justify; }
+
+/* ============================================
+   Utility Classes - Text Transform
+   ============================================ */
+
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+.normal-case { text-transform: none; }
+
+/* ============================================
+   Utility Classes - Text Decoration
+   ============================================ */
+
+.underline { text-decoration: underline; }
+.line-through { text-decoration: line-through; }
+.no-underline { text-decoration: none; }
+
+/* ============================================
+   Utility Classes - Text Overflow
+   ============================================ */
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.line-clamp-1,
+.line-clamp-2,
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-1 { -webkit-line-clamp: 1; }
+.line-clamp-2 { -webkit-line-clamp: 2; }
+.line-clamp-3 { -webkit-line-clamp: 3; }
+
+/* ============================================
+   Accessibility - Screen Reader Only
+   ============================================ */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: black;
+  }
+
+  h1 { font-size: 24pt; }
+  h2 { font-size: 20pt; }
+  h3 { font-size: 16pt; }
+  h4 { font-size: 14pt; }
+  h5 { font-size: 12pt; }
+  h6 { font-size: 12pt; }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  p, blockquote, ul, ol {
+    page-break-inside: avoid;
+  }
+
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: #666;
+  }
+}
+
+/* ============================================
+   High Contrast Mode Support
+   ============================================ */
+
+@media (prefers-contrast: high) {
+  body {
+    font-weight: var(--font-weight-medium);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--font-weight-extrabold);
+  }
+
+  a {
+    text-decoration-thickness: 2px;
+  }
+
+  code {
+    border: 1px solid currentColor;
+  }
+}
+
+/* ============================================
+   Reduced Motion Support
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
